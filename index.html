@@ -24,7 +24,7 @@
     <!-- 1. NAV / HEADER -->
     <header class="site-header" id="header">
         <div class="header-container">
-            <a href="#hero" class="brand-logo" aria-label="Glumina Home">
+            <a href="index.html" class="brand-logo" aria-label="Glumina Home">
                 <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
                 <span class="brand-name">glumina</span>
             </a>
@@ -39,18 +39,18 @@
             <!-- Navigation Menu -->
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#hero" class="nav-link active">HOME</a></li>
-                    <li class="nav-item"><a href="#layanan" class="nav-link">SERVICE</a></li>
-                    <li class="nav-item"><a href="#tentang" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li class="nav-item"><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
+                    <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
                     <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
-                    <li class="nav-item"><a href="#cta" class="nav-link">CONTACT US</a></li>
+                    <li class="nav-item"><a href="index.html#cta" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <!-- Action Button -->
             <div class="header-action">
-                <a href="#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+                <a href="index.html#cta" class="btn btn-pill btn-primary">GET STARTED</a>
             </div>
         </div>
     </header>
@@ -271,10 +271,10 @@
                 <div class="footer-col">
                     <h4 class="footer-heading font-bitcount">Navigasi</h4>
                     <ul class="footer-nav">
-                        <li><a href="#hero" class="footer-link">Home</a></li>
-                        <li><a href="#layanan" class="footer-link">Service</a></li>
-                        <li><a href="#tentang" class="footer-link">About Us</a></li>
-                        <li><a href="#cta" class="footer-link">Contact</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="index.html#layanan" class="footer-link">Service</a></li>
+                        <li><a href="index.html#tentang" class="footer-link">About Us</a></li>
+                        <li><a href="index.html#cta" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
 
@@ -282,11 +282,11 @@
                 <div class="footer-col">
                     <h4 class="footer-heading font-bitcount">Layanan AI</h4>
                     <ul class="footer-nav">
-                        <li><a href="#service-image-gen" class="footer-link">Image Generation</a></li>
-                        <li><a href="#service-comp-vision" class="footer-link">Computer Vision</a></li>
-                        <li><a href="#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
-                        <li><a href="#service-automation" class="footer-link">Business Automation</a></li>
-                        <li><a href="#service-analysis" class="footer-link">Analysis Prediction</a></li>
+                        <li><a href="index.html#service-image-gen" class="footer-link">Image Generation</a></li>
+                        <li><a href="index.html#service-comp-vision" class="footer-link">Computer Vision</a></li>
+                        <li><a href="index.html#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
+                        <li><a href="index.html#service-automation" class="footer-link">Business Automation</a></li>
+                        <li><a href="index.html#service-analysis" class="footer-link">Analysis Prediction</a></li>
                     </ul>
                 </div>
 
@@ -446,12 +446,10 @@
             });
 
             // Handle quick navigation links to specific service cards (hero button, footer, navbar)
-            document.querySelectorAll('a[href^="#service-"], a[href="#layanan"], .btn-hero').forEach(link => {
+            document.querySelectorAll('a[href*="#service-"], a[href*="#layanan"], .btn-hero').forEach(link => {
                 link.addEventListener('click', (e) => {
                     const href = link.getAttribute('href');
                     if (!href) return;
-
-                    e.preventDefault();
 
                     // 1. Scroll main page vertically to services section
                     if (servicesSection) {
@@ -461,7 +459,9 @@
                     }
 
                     // 2. Scroll carousel horizontally to center the targeted card
-                    const targetId = href.startsWith('#service-') ? href.substring(1) : 'service-image-gen';
+                    const hashIndex = href.indexOf('#');
+                    const targetHash = hashIndex !== -1 ? href.substring(hashIndex + 1) : '';
+                    const targetId = targetHash.startsWith('service-') ? targetHash : 'service-image-gen';
                     const targetCard = document.getElementById(targetId) || allCards[50];
 
                     if (targetCard && allCards.length > 0) {
@@ -486,9 +486,9 @@
                         const id = entry.target.getAttribute('id');
                         navLinks.forEach(link => {
                             const href = link.getAttribute('href');
-                            if (href === `#${id}`) {
+                            if (href === `#${id}` || href === `index.html#${id}` || (id === 'hero' && (href === 'index.html' || href === '/index' || href === '/'))) {
                                 link.classList.add('active');
-                            } else if (href.startsWith('#')) {
+                            } else {
                                 link.classList.remove('active');
                             }
                         });
