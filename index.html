@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glumina - Solusi teknologi kecerdasan buatan (AI) terdepan untuk transformasi digital, otomasi bisnis, computer vision, dan chatbot interaktif.">
+    <title>Glumina — When Intelligence Reaches Out to Instinct</title>
+
+    <!-- Google Fonts: Inter & Bitcount Single -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logoglumina.png">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body>
+
+    <!-- 1. NAV / HEADER -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="brand-logo" aria-label="Glumina Home">
+                <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
+                <span class="brand-name">glumina</span>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">HOME</a></li>
+                    <li class="nav-item"><a href="#layanan" class="nav-link">SERVICE</a></li>
+                    <li class="nav-item"><a href="#tentang" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="#cta" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-action">
+                <a href="#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="hero-glow hero-glow-top"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    When <span class="text-gold-italic">Intelligence</span> reaches out to instinct, the future takes shape </h1>
+                <p class="hero-subtitle">
+                    An artistic collision where human intuition and algorithmic precision come as one
+                </p>
+                <div class="hero-cta-wrapper">
+                    <a href="#service-image-gen" class="btn btn-pill btn-hero">
+                        <span>LIHAT LAYANAN</span>
+                        <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="assets/images/hero.png" alt="Human finger touching robotic cybernetic hand" class="hero-img">
+            </div>
+        </section>
+
+        <!-- 3. LAYANAN SECTION -->
+        <section class="services-section" id="layanan">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="services-title">
+                        <span class="text-gold-italic">Glumina</span> Services
+                    </h2>
+                    <p class="services-subtitle">Comprehensive AI Services For Global</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Card 01: Image Generation -->
+                    <article class="service-card" id="service-image-gen">
+                        <div class="card-badge">01</div>
+                        <div class="card-visual-wrapper">
+                            <img src="assets/images/fitur/imagegenerate.png" alt="Image Generation 3D Icon" class="card-img" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title font-bitcount">Image Generation</h3>
+                            <p class="card-description">
+                                Menghasilkan visual berkualitas tinggi dan aset kreatif secara instan menggunakan generative AI mutakhir untuk akselerasi desain dan promosi digital bisnis Anda.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 02: Computer Vision -->
+                    <article class="service-card" id="service-comp-vision">
+                        <div class="card-badge">02</div>
+                        <div class="card-visual-wrapper">
+                            <img src="assets/images/fitur/compvision.png" alt="Computer Vision 3D Icon" class="card-img" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title font-bitcount">Computer Vision</h3>
+                            <p class="card-description">
+                                Melakukan deteksi objek, klasifikasi visual, deteksi dan ekstraksi teks (OCR), segmentasi citra, hingga rekognisi wajah untuk pengawasan cerdas dan analitik visual.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 03: Assistant Chatbot (Featured) -->
+                    <article class="service-card featured-card" id="service-chatbot">
+                        <div class="card-badge">03</div>
+                        <div class="card-visual-wrapper">
+                            <img src="assets/images/fitur/chatassist.png" alt="Assistant Chatbot 3D Orb Icon" class="card-img floating-orb" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title font-bitcount">Assistant Chatbot</h3>
+                            <p class="card-description">
+                                Membangun chatbot interaktif cerdas yang mampu berkomunikasi secara otomatis dengan pengguna sesuai alur bisnis. Dukungan untuk integrasi multi-platform dan ticketing cerdas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 04: Business Automation -->
+                    <article class="service-card" id="service-automation">
+                        <div class="card-badge">04</div>
+                        <div class="card-visual-wrapper">
+                            <img src="assets/images/fitur/business.png" alt="Business Automation 3D Icon" class="card-img" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title font-bitcount">Bussiness Automation</h3>
+                            <p class="card-description">
+                                Otomasi alur kerja end-to-end, termasuk integrasi alur data, validasi otomatis, ekstraksi dokumen, pengingat cerdas, hingga eksekusi tugas rutin tanpa intervensi manual.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 05: Analysis Prediction -->
+                    <article class="service-card" id="service-analysis">
+                        <div class="card-badge">05</div>
+                        <div class="card-visual-wrapper">
+                            <img src="assets/images/fitur/analysis.png" alt="Analysis Prediction 3D Icon" class="card-img" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title font-bitcount">Analysis Prediction</h3>
+                            <p class="card-description">
+                                Menganalisis pola data historis dengan algoritma prediktif modern untuk peramalan tren pasar, deteksi anomali real-time, dan pengambilan keputusan strategis akurat.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TENTANG SECTION -->
+        <section class="about-section" id="tentang">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <h2 class="about-title">
+                            About <span class="text-gold-italic">Glumina</span>
+                        </h2>
+                        <div class="about-description">
+                            <p>
+                                <strong class="text-white">Glumina</strong> adalah perusahaan penyedia solusi teknologi berbasis kecerdasan buatan (<em>Artificial Intelligence</em>) yang inovatif dan terintegrasi. <strong class="text-white">Glumina</strong> menghadirkan serangkaian fitur canggih—mulai dari <em>Assistant Chatbot</em>, <em>Computer Vision</em>, <em>Business Automation</em>, <em>Analysis Prediction</em>, hingga <em>Image Generate</em> yang dirancang untuk membantu berbagai skala industri dalam mengoptimalkan efisiensi operasional, meningkatkan akurasi analisis data, serta mempercepat transformasi digital secara menyeluruh.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-media-wrapper">
+                        <div class="blob-glow"></div>
+                        <img src="assets/images/luminalogo.gif" alt="Glumina Glowing Lumina 3D Logo Animation" class="about-blob-img" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Client / Partner Logos Ticker -->
+                <div class="partners-section">
+                    <p class="partners-label">Dipercaya oleh berbagai ekosistem & teknologi kelas dunia</p>
+                    <div class="partners-row">
+                        <div class="partner-item">
+                            <img src="assets/images/client/aws.png" alt="Amazon Web Services" class="partner-logo" loading="lazy">
+                        </div>
+                        <div class="partner-item">
+                            <img src="assets/images/client/googlecloud.png" alt="Google Cloud" class="partner-logo" loading="lazy">
+                        </div>
+                        <div class=" partner-item">
+                            <img src="assets/images/client/meta.png" alt="Meta" class="partner-logo" loading="lazy">
+                        </div>
+                        <div class="partner-item">
+                            <img src="assets/images/client/ibm.png" alt="IBM" class="partner-logo" loading="lazy">
+                        </div>
+                        <div class="partner-item">
+                            <img src="assets/images/client/metrodata.png" alt="Metrodata" class="partner-logo" loading="lazy">
+                        </div>
+                        <div class="partner-item">
+                            <img src="assets/images/client/openai.png" alt="OpenAI" class="partner-logo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CALL TO ACTION SECTION -->
+        <section class="cta-section" id="cta">
+            <div class="section-container">
+                <div class="cta-card">
+                    <div class="cta-glow-circle"></div>
+                    <div class="cta-content">
+                        <span class="cta-badge font-bitcount">READY TO SHAPE THE FUTURE</span>
+                        <h2 class="cta-title">
+                            Siap Membawa Bisnis Anda Melangkah ke Era<span class="text-gold-italic"> Artificial Intelligence</span>
+                        </h2>
+                        <p class="cta-description font-bitcount">
+                            Tingkatkan produktivitas, pangkas biaya operasional, dan bangun ekosistem digital cerdas bersama solusi AI kustom dari Glumina.
+                        </p>
+
+                        <form class="cta-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan dan informasi Anda telah terkirim. Tim Glumina akan segera menghubungi Anda.');">
+                            <div class="cta-form-grid">
+                                <div class="form-group">
+                                    <label for="ctaName" class="form-label">Nama Lengkap</label>
+                                    <input type="text" id="ctaName" class="cta-field" placeholder="Masukkan nama lengkap Anda..." required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ctaEmail" class="form-label">Email Bisnis</label>
+                                    <input type="email" id="ctaEmail" class="cta-field" placeholder="nama@perusahaan.com" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="ctaMessage" class="form-label">Pesan / Informasi Kontak</label>
+                                    <textarea id="ctaMessage" class="cta-field cta-textarea" rows="3" placeholder="Tuliskan kebutuhan AI atau informasi kontak tambahan Anda..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-submit-wrapper">
+                                <button type="submit" class="btn btn-pill btn-cta-submit">
+                                    <span>TANYA LEBIH LANJUT</span>
+                                    <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. FOOTER -->
+    <footer class="site-footer" id="kontak">
+        <div class="section-container">
+            <div class="footer-top">
+                <!-- Brand & Description -->
+                <div class="footer-col footer-brand-col">
+                    <div class="footer-brand">
+                        <img src="assets/images/luminalogo.gif" alt="Glumina Logo" class="footer-logo">
+                        <span class="footer-brand-name">glumina</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.
+                    </p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Navigasi</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#hero" class="footer-link">Home</a></li>
+                        <li><a href="#layanan" class="footer-link">Service</a></li>
+                        <li><a href="#tentang" class="footer-link">About Us</a></li>
+                        <li><a href="#cta" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Layanan AI</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#service-image-gen" class="footer-link">Image Generation</a></li>
+                        <li><a href="#service-comp-vision" class="footer-link">Computer Vision</a></li>
+                        <li><a href="#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
+                        <li><a href="#service-automation" class="footer-link">Business Automation</a></li>
+                        <li><a href="#service-analysis" class="footer-link">Analysis Prediction</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Hubungi Kami</h4>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong> contact@glumina.ai</li>
+                        <li><strong>Telepon:</strong> +62 (21) 8089-2026</li>
+                        <li><strong>Lokasi:</strong> Laguboti, Toba, Sumatera Utara, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Glumina AI Technologies. Seluruh Hak Cipta Dilindungi.</p>
+                <p class="footer-academic">Praktikum Pengembangan Aplikasi Berbasis Web (PABWE)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple script for mobile navigation toggle -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                mainNav.classList.toggle('open');
+            });
+
+            // Close menu when clicking nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mainNav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Interactive & Infinite Services Carousel
+        const grid = document.querySelector('.services-grid');
+        const servicesSection = document.querySelector('.services-section');
+        const originalCards = Array.from(document.querySelectorAll('.service-card'));
+
+        if (grid && originalCards.length > 0) {
+            // Clone cards to simulate infinite scrolling (DOM nodes are cheap)
+            // Prepend 10 sets (50 cards) for scrolling left
+            for (let i = 0; i < 10; i++) {
+                originalCards.slice().reverse().forEach(card => {
+                    let clone = card.cloneNode(true);
+                    clone.removeAttribute('id');
+                    grid.prepend(clone);
+                });
+            }
+            // Append 20 sets (100 cards) for scrolling right (and autoplay)
+            for (let i = 0; i < 20; i++) {
+                originalCards.forEach(card => {
+                    let clone = card.cloneNode(true);
+                    clone.removeAttribute('id');
+                    grid.appendChild(clone);
+                });
+            }
+
+            const allCards = document.querySelectorAll('.service-card');
+
+            // Start at the original center card (50 prepended + 2 offset = index 52)
+            let currentIndex = 52;
+            let isAutoPlaying = true;
+            let isSectionInView = false;
+            let autoPlayInterval;
+
+            // Helper to scroll ONLY the horizontal container (never pulls/jumps window vertical scroll)
+            const scrollToCard = (index, behavior = 'smooth') => {
+                if (!allCards[index]) return;
+                const targetCard = allCards[index];
+                const targetLeft = targetCard.offsetLeft - (grid.clientWidth / 2) + (targetCard.clientWidth / 2);
+                grid.scrollTo({
+                    left: targetLeft,
+                    behavior: behavior
+                });
+            };
+
+            // Scroll to starting card horizontally on load without affecting page scroll
+            setTimeout(() => {
+                scrollToCard(currentIndex, 'instant');
+            }, 50);
+
+            // Observe section visibility so autoplay pauses when user scrolls past the section
+            if (servicesSection) {
+                const sectionObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        isSectionInView = entry.isIntersecting;
+                    });
+                }, {
+                    threshold: 0.15
+                });
+                sectionObserver.observe(servicesSection);
+            }
+
+            const observerOptions = {
+                root: grid,
+                rootMargin: '0px -45% 0px -45%', // Trigger exactly in the horizontal center
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        allCards.forEach(c => c.classList.remove('featured-card'));
+                        entry.target.classList.add('featured-card');
+
+                        // Update current index based on which card is intersected
+                        currentIndex = Array.from(allCards).indexOf(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            allCards.forEach(card => observer.observe(card));
+
+            // Auto-play logic
+            const startAutoPlay = () => {
+                if (autoPlayInterval) clearInterval(autoPlayInterval);
+                autoPlayInterval = setInterval(() => {
+                    if (!isAutoPlaying || !isSectionInView || currentIndex >= allCards.length - 1) return;
+                    currentIndex++;
+                    scrollToCard(currentIndex, 'smooth');
+                }, 3000); // scrolls every 3 seconds
+            };
+
+            // Pause on hover or touch
+            grid.addEventListener('mouseenter', () => isAutoPlaying = false);
+            grid.addEventListener('mouseleave', () => isAutoPlaying = true);
+            grid.addEventListener('touchstart', () => isAutoPlaying = false, {
+                passive: true
+            });
+            grid.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    isAutoPlaying = true;
+                }, 2000);
+            }, {
+                passive: true
+            });
+
+            // Pause autoplay when user is scrolling the main page
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                isAutoPlaying = false;
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    isAutoPlaying = true;
+                }, 1500);
+            }, {
+                passive: true
+            });
+
+            // Handle quick navigation links to specific service cards (hero button, footer, navbar)
+            document.querySelectorAll('a[href^="#service-"], a[href="#layanan"], .btn-hero').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (!href) return;
+
+                    e.preventDefault();
+
+                    // 1. Scroll main page vertically to services section
+                    if (servicesSection) {
+                        servicesSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // 2. Scroll carousel horizontally to center the targeted card
+                    const targetId = href.startsWith('#service-') ? href.substring(1) : 'service-image-gen';
+                    const targetCard = document.getElementById(targetId) || allCards[50];
+
+                    if (targetCard && allCards.length > 0) {
+                        const cardIndex = Array.from(allCards).indexOf(targetCard);
+                        if (cardIndex !== -1) {
+                            currentIndex = cardIndex;
+                            scrollToCard(currentIndex, 'smooth');
+                        }
+                    }
+                });
+            });
+
+            startAutoPlay();
+
+            // Dynamic active navbar link line on scroll (Scrollspy)
+            const spySections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.main-nav .nav-link');
+
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href');
+                            if (href === `#${id}`) {
+                                link.classList.add('active');
+                            } else if (href.startsWith('#')) {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '-30% 0px -50% 0px',
+                threshold: 0
+            });
+
+            spySections.forEach(sec => spyObserver.observe(sec));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glumina Blog — Wawasan terkini seputar Artificial Intelligence, Machine Learning, Computer Vision, dan Otomasi Bisnis.">
+    <title>Glumina Blog — AI Insights & Articles</title>
+
+    <!-- Google Fonts: Inter & Bitcount Single -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logoglumina.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- External Stylesheet (Glumina Custom Styling) -->
+    <link rel="stylesheet" href="styles/app.css">
+    <style>
+        .blog-hero {
+            padding-top: calc(var(--header-height) + 50px);
+            padding-bottom: 60px;
+        }
+
+        .blog-hero-title {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .blog-hero-subtitle {
+            font-family: var(--font-bitcount);
+            color: #9ea4b0;
+            font-size: 0.95rem;
+            max-width: 680px;
+            margin: 0 auto 36px auto;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+        }
+
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .category-pill {
+            padding: 8px 20px;
+            border-radius: var(--radius-pill);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a4abb8;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .category-pill.active,
+        .category-pill:hover {
+            background: #ffffff;
+            color: #0b0c10;
+            border-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV / HEADER -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="index.html#hero" class="brand-logo" aria-label="Glumina Home">
+                <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
+                <span class="brand-name">glumina</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#hero" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
+                    <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
+                    <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="index.html#cta" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-action">
+                <a href="index.html#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container text-center">
+                <h1 class="blog-hero-title">
+                    Glumina <span class="text-gold-italic">AI Insights</span>
+                </h1>
+                <p class="blog-hero-subtitle">
+                    Temukan artikel, wawasan mendalam, dan tren teknologi kecerdasan buatan mutakhir untuk mengakselerasi transformasi digital industri Anda.
+                </p>
+
+                <!-- Search Input with Bootstrap Icon -->
+                <div class="blog-search-box">
+                    <i class="bi bi-search blog-search-icon"></i>
+                    <input type="text" id="blogSearchInput" class="blog-search-input" placeholder="Cari topik AI (Generative, Vision, LLM, Otomasi)...">
+                </div>
+
+                <!-- Category Filters with Bootstrap Icons -->
+                <div class="blog-categories" id="categoryContainer">
+                    <button class="category-pill active" data-category="all">
+                        <i class="bi bi-grid-fill"></i> Semua Artikel
+                    </button>
+                    <button class="category-pill" data-category="Generative AI">
+                        <i class="bi bi-magic"></i> Generative AI
+                    </button>
+                    <button class="category-pill" data-category="Computer Vision">
+                        <i class="bi bi-eye"></i> Computer Vision
+                    </button>
+                    <button class="category-pill" data-category="Chatbot AI">
+                        <i class="bi bi-robot"></i> Chatbot AI
+                    </button>
+                    <button class="category-pill" data-category="Otomasi Bisnis">
+                        <i class="bi bi-diagram-3"></i> Otomasi Bisnis
+                    </button>
+                    <button class="category-pill" data-category="AI Trends">
+                        <i class="bi bi-graph-up-arrow"></i> AI Trends
+                    </button>
+                    <button class="category-pill" data-category="AI Governance">
+                        <i class="bi bi-shield-lock"></i> Tata Kelola AI
+                    </button>
+                </div>
+
+                <!-- Bootstrap Grid Layout for Blog Cards -->
+                <div class="row g-4 text-start mb-5" id="blogCardsRow">
+                    
+                    <!-- Article 1: Generative AI -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="Generative AI">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-magic"></i> Generative AI
+                                </span>
+                                <img src="assets/images/fitur/imagegenerate.png" alt="Generative AI" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 16 Sept 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 5 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=generative-ai">
+                                        Masa Depan Generative AI dalam Transformasi Desain Digital & Produksi Media
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Bagaimana teknologi pembuatan gambar dan media sintetis berbasis AI mengubah alur kerja tim kreatif, mereduksi waktu ideasi hingga 80%, dan mempercepat rilis kampanye.
+                                </p>
+                                <a href="blog-detail.html?id=generative-ai" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2: Computer Vision -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="Computer Vision">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-eye"></i> Computer Vision
+                                </span>
+                                <img src="assets/images/fitur/compvision.png" alt="Computer Vision" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 14 Sept 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 7 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=computer-vision">
+                                        Penerapan Computer Vision untuk Pengawasan Smart Factory & Otomasi Industri
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Eksplorasi deteksi cacat otomatis, OCR berkecepatan tinggi, dan pemantauan K3 real-time menggunakan jaringan saraf konvolusional (CNN) di jalur manufaktur.
+                                </p>
+                                <a href="blog-detail.html?id=computer-vision" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3: Chatbot AI -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="Chatbot AI">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-robot"></i> Chatbot AI
+                                </span>
+                                <img src="assets/images/fitur/chatassist.png" alt="Chatbot AI" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 10 Sept 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 6 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=chatbot-ai">
+                                        Membangun Assistant Chatbot Enterprise dengan RAG & Konteks Multibahasa
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Strategi integrasi LLM dan Retrieval-Augmented Generation (RAG) untuk layanan pelanggan 24/7 yang presisi tanpa halusinasi data internal enterprise.
+                                </p>
+                                <a href="blog-detail.html?id=chatbot-ai" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 4: Autonomous Agents -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="Otomasi Bisnis">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-diagram-3"></i> Otomasi Bisnis
+                                </span>
+                                <img src="assets/images/fitur/business.png" alt="Autonomous Agents" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 06 Sept 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 8 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=autonomous-agents">
+                                        Era Autonomous AI Agents: Mengotomatiskan Alur Kerja Bisnis Kompleks
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Bagaimana agen AI mandiri melakukan pengambilan keputusan multi-langkah, eksekusi API otomatis, dan kolaborasi multi-agent tanpa supervisi konstan.
+                                </p>
+                                <a href="blog-detail.html?id=autonomous-agents" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 5: Predictive Analytics -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="AI Trends">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-graph-up-arrow"></i> AI Trends
+                                </span>
+                                <img src="assets/images/fitur/analysis.png" alt="Predictive Analytics" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 02 Sept 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 5 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=predictive-analytics">
+                                        Predictive Analytics Berbasis Machine Learning untuk Optimalisasi Supply Chain
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Memprediksi permintaan pasar dan risiko rantai pasok secara akurat dengan model perkiraan deret waktu (time-series) dan analisis preskriptif cerdas.
+                                </p>
+                                <a href="blog-detail.html?id=predictive-analytics" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 6: AI Governance -->
+                    <div class="col-12 col-md-6 col-lg-4 blog-card-item" data-category="AI Governance">
+                        <div class="card bs-blog-card">
+                            <div class="bs-card-img-wrapper">
+                                <span class="bs-card-badge">
+                                    <i class="bi bi-shield-lock"></i> Tata Kelola AI
+                                </span>
+                                <img src="assets/images/fitur/imagegenerate.png" alt="Etika AI" class="bs-card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="bs-card-meta">
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-calendar3"></i> 28 Agu 2026
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="bs-card-meta-item">
+                                        <i class="bi bi-clock"></i> 6 menit
+                                    </span>
+                                </div>
+                                <h2 class="bs-card-title">
+                                    <a href="blog-detail.html?id=ai-ethics">
+                                        Etika AI & Tata Kelola Data: Membangun Sistem AI yang Bertanggung Jawab
+                                    </a>
+                                </h2>
+                                <p class="bs-card-text">
+                                    Panduan praktis mitigasi bias algoritma, perlindungan privasi data pengguna, dan transparansi AI (Explainable AI) bagi penerapan enterprise yang aman.
+                                </p>
+                                <a href="blog-detail.html?id=ai-ethics" class="bs-btn-link">
+                                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="kontak">
+        <div class="section-container">
+            <div class="footer-top">
+                <div class="footer-col footer-brand-col">
+                    <div class="footer-brand">
+                        <img src="assets/images/luminalogo.gif" alt="Glumina Logo" class="footer-logo">
+                        <span class="footer-brand-name">glumina</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Navigasi</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#hero" class="footer-link">Home</a></li>
+                        <li><a href="index.html#layanan" class="footer-link">Service</a></li>
+                        <li><a href="index.html#tentang" class="footer-link">About Us</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="cv.html" class="footer-link">CV</a></li>
+                        <li><a href="index.html#cta" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Layanan AI</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#service-image-gen" class="footer-link">Image Generation</a></li>
+                        <li><a href="index.html#service-comp-vision" class="footer-link">Computer Vision</a></li>
+                        <li><a href="index.html#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
+                        <li><a href="index.html#service-automation" class="footer-link">Business Automation</a></li>
+                        <li><a href="index.html#service-analysis" class="footer-link">Analysis Prediction</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading font-bitcount">Hubungi Kami</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:info@glumina.ai" class="contact-val">info@glumina.ai</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Lokasi:</span>
+                            <span class="contact-val">Laguboti, Toba, Sumatera Utara</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    &copy; 2026 Glumina Technology Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+
+        // Category Filter & Search Functionality
+        const categoryButtons = document.querySelectorAll('.category-pill');
+        const cardItems = document.querySelectorAll('.blog-card-item');
+        const searchInput = document.getElementById('blogSearchInput');
+
+        let activeCategory = 'all';
+
+        function filterArticles() {
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+            cardItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                const cardTitle = item.querySelector('.bs-card-title').textContent.toLowerCase();
+                const cardText = item.querySelector('.bs-card-text').textContent.toLowerCase();
+
+                const matchesCategory = (activeCategory === 'all' || itemCategory === activeCategory);
+                const matchesSearch = (query === '' || cardTitle.includes(query) || cardText.includes(query));
+
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeCategory = btn.getAttribute('data-category');
+                filterArticles();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterArticles);
+        }
+    </script>
+</body>
+
+</html>
