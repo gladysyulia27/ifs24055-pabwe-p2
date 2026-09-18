@@ -17,120 +17,11 @@
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="styles/app.css">
-    <style>
-        .cv-hero {
-            padding-top: calc(var(--header-height) + 60px);
-            padding-bottom: 80px;
-        }
-
-        .cv-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-lg);
-            padding: 48px;
-            backdrop-filter: blur(16px);
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .cv-header {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 40px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .cv-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--cyan-accent);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
-        }
-
-        .cv-title-group h1 {
-            font-size: 2.2rem;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .cv-role {
-            font-family: var(--font-bitcount);
-            color: #F5DCA6;
-            font-size: 1.05rem;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-
-        .cv-bio {
-            color: #9ea4b0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .cv-section {
-            margin-bottom: 40px;
-        }
-
-        .cv-section-title {
-            font-family: var(--font-bitcount);
-            font-size: 1.25rem;
-            color: #ffffff;
-            border-left: 3px solid var(--cyan-accent);
-            padding-left: 14px;
-            margin-bottom: 24px;
-        }
-
-        .cv-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .cv-info-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 20px;
-            border-radius: var(--radius-md);
-        }
-
-        .cv-info-item h3 {
-            font-size: 1.05rem;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .cv-info-item p {
-            font-size: 0.88rem;
-            color: #a4abb8;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-badge {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: var(--cyan-accent);
-            padding: 6px 14px;
-            border-radius: var(--radius-pill);
-            font-size: 0.82rem;
-            font-weight: 500;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAV / HEADER -->
+    <!-- 1. NAV / HEADER -->
     <header class="site-header" id="header">
         <div class="header-container">
             <a href="index.html" class="brand-logo" aria-label="Glumina Home">
@@ -138,12 +29,14 @@
                 <span class="brand-name">glumina</span>
             </a>
 
+            <!-- Mobile Menu Toggle Button -->
             <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
 
+            <!-- Navigation Menu -->
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
@@ -151,12 +44,12 @@
                     <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
                     <li class="nav-item"><a href="cv.html" class="nav-link active">CV</a></li>
-                    <li class="nav-item"><a href="index.html#cta" class="nav-link">CONTACT US</a></li>
+                    <li class="nav-item mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <div class="header-action">
-                <a href="index.html#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+                <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
             </div>
         </div>
     </header>

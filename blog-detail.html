@@ -23,141 +23,11 @@
 
     <!-- External Stylesheet (Glumina Custom Styling) -->
     <link rel="stylesheet" href="styles/app.css">
-    <style>
-        .article-section {
-            padding-top: calc(var(--header-height) + 40px);
-            padding-bottom: 80px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--cyan-accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 28px;
-            transition: transform var(--transition-fast);
-        }
-
-        .back-link:hover {
-            transform: translateX(-4px);
-            color: #ffffff;
-        }
-
-        .article-cover-img {
-            width: 100%;
-            max-height: 440px;
-            object-fit: cover;
-            border-radius: var(--radius-lg);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            margin-bottom: 40px;
-        }
-
-        .article-body-text {
-            color: #c0c6d4;
-            font-size: 1.05rem;
-            line-height: 1.85;
-        }
-
-        .article-body-text p {
-            margin-bottom: 24px;
-        }
-
-        .article-body-text h2 {
-            color: #ffffff;
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .article-body-text h3 {
-            color: var(--cyan-accent);
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 14px;
-        }
-
-        .article-body-text ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 24px;
-        }
-
-        .article-body-text ul li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 12px;
-            color: #d1d5db;
-        }
-
-        .article-body-text ul li::before {
-            content: "\F26B";
-            font-family: "bootstrap-icons";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--cyan-accent);
-            font-size: 0.95rem;
-        }
-
-        .share-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-md);
-            margin: 40px 0;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .share-btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-action-icon {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: var(--radius-pill);
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all var(--transition-fast);
-            cursor: pointer;
-        }
-
-        .btn-action-icon:hover {
-            background: var(--cyan-accent);
-            color: #0b0c10;
-            border-color: var(--cyan-accent);
-        }
-
-        .related-title {
-            font-size: 1.8rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAV / HEADER -->
+    <!-- 1. NAV / HEADER -->
     <header class="site-header" id="header">
         <div class="header-container">
             <a href="index.html" class="brand-logo" aria-label="Glumina Home">
@@ -165,12 +35,14 @@
                 <span class="brand-name">glumina</span>
             </a>
 
+            <!-- Mobile Menu Toggle Button -->
             <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
 
+            <!-- Navigation Menu -->
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
@@ -178,12 +50,12 @@
                     <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
                     <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
-                    <li class="nav-item"><a href="index.html#cta" class="nav-link">CONTACT US</a></li>
+                    <li class="nav-item mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <div class="header-action">
-                <a href="index.html#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+                <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
             </div>
         </div>
     </header>

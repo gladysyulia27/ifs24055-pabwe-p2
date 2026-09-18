@@ -23,64 +23,11 @@
 
     <!-- External Stylesheet (Glumina Custom Styling) -->
     <link rel="stylesheet" href="styles/app.css">
-    <style>
-        .blog-hero {
-            padding-top: calc(var(--header-height) + 50px);
-            padding-bottom: 60px;
-        }
-
-        .blog-hero-title {
-            font-size: 2.8rem;
-            font-weight: 400;
-            color: #ffffff;
-            margin-bottom: 16px;
-        }
-
-        .blog-hero-subtitle {
-            font-family: var(--font-bitcount);
-            color: #9ea4b0;
-            font-size: 0.95rem;
-            max-width: 680px;
-            margin: 0 auto 36px auto;
-            letter-spacing: 0.3px;
-            line-height: 1.6;
-        }
-
-        .blog-categories {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .category-pill {
-            padding: 8px 20px;
-            border-radius: var(--radius-pill);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #a4abb8;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .category-pill.active,
-        .category-pill:hover {
-            background: #ffffff;
-            color: #0b0c10;
-            border-color: #ffffff;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAV / HEADER -->
+    <!-- 1. NAV / HEADER -->
     <header class="site-header" id="header">
         <div class="header-container">
             <a href="index.html" class="brand-logo" aria-label="Glumina Home">
@@ -88,12 +35,14 @@
                 <span class="brand-name">glumina</span>
             </a>
 
+            <!-- Mobile Menu Toggle Button -->
             <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
 
+            <!-- Navigation Menu -->
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
@@ -101,12 +50,12 @@
                     <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
                     <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
-                    <li class="nav-item"><a href="index.html#cta" class="nav-link">CONTACT US</a></li>
+                    <li class="nav-item mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <div class="header-action">
-                <a href="index.html#cta" class="btn btn-pill btn-primary">GET STARTED</a>
+                <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
             </div>
         </div>
     </header>
