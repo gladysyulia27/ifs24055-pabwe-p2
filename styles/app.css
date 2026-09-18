@@ -122,6 +122,10 @@ body {
     color: #ffffff;
 }
 
+.text-muted {
+    color: #9ea4b0 !important;
+}
+
 /* Media Elements */
 img {
     max-width: 100%;
@@ -883,7 +887,7 @@ textarea::placeholder,
 .cta-field::placeholder {
     font-family: var(--font-bitcount);
     font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
-    color: #64748b;
+    color: #94a3b8;
     font-size: 0.85rem;
     letter-spacing: 0.3px;
 }
@@ -1015,7 +1019,7 @@ textarea::placeholder,
     padding-top: 28px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.82rem;
-    color: #5c6270;
+    color: #8b92a2;
 }
 
 .footer-academic {
@@ -1384,7 +1388,7 @@ textarea::placeholder,
     left: 18px;
     top: 50%;
     transform: translateY(-50%);
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 1.1rem;
 }
 
