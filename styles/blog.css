@@ -132,7 +132,10 @@
     font-size: 2.8rem;
     font-weight: 400;
     color: #fff;
-    margin-bottom: 16px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 12px;
 }
 
 .blog-hero-subtitle {
@@ -140,7 +143,9 @@
     color: #9ea4b0;
     font-size: .95rem;
     max-width: 680px;
-    margin: 0 auto 36px;
+    display: block;
+    text-align: left;
+    margin: 0 0 40px 0;
     letter-spacing: .3px;
     line-height: 1.6;
 }
