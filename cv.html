@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curriculum Vitae — Profil Pengembang & Tim Utama Glumina AI Solutions.">
+    <meta name="description" content="Curriculum Vitae — Gladys Yulia Stephanie Manurung.">
     <title>Glumina — Curriculum Vitae (CV)</title>
 
     <!-- Google Fonts: Inter & Bitcount Single -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logoglumina.png">
@@ -44,7 +47,9 @@
                     <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
                     <li class="nav-item"><a href="cv.html" class="nav-link active">CV</a></li>
-                    <li class="nav-item mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
+                    <li class="nav-item mobile-nav-cta">
+                        <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -58,18 +63,41 @@
         <section class="cv-hero">
             <div class="section-container">
                 <div class="cv-card">
+
+                    <!-- Profile Header -->
                     <div class="cv-header">
-                        <img src="assets/images/luminalogo.gif" alt="Developer Avatar" class="cv-avatar">
+                        <img src="assets/images/profilcv.png" alt="Foto profil Gladys Manurung" class="cv-avatar">
                         <div class="cv-title-group">
-                            <h1>Glumina Development Team</h1>
-                            <p class="cv-role">AI Engineer & Web Development Specialist</p>
+                            <h1>Gladys Yulia Stephanie Manurung</h1>
+                            <p class="cv-role">Aspiring AI Engineer &amp; Full-Stack Web Developer</p>
                             <p class="cv-bio">
-                                Tim pengembang di Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern berperforma tinggi.
+                                Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur
+                                kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern berperforma tinggi.
                             </p>
+
+                            <!-- Kontak -->
+                            <div class="cv-contacts">
+                                <a href="mailto:gladysyulia27@gmail.com" class="cv-contact-link">
+                                    <i class="bi bi-envelope-fill"></i> gladysyulia27@gmail.com
+                                </a>
+                                <a href="tel:+6281221910971" class="cv-contact-link">
+                                    <i class="bi bi-whatsapp"></i> +62 812-2191-0971
+                                </a>
+                                <a href="https://github.com/gladysyulia27"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="cv-contact-link">
+                                    <i class="bi bi-github"></i> github.com/gladysyulia27
+                                </a>
+                                <a href="https://www.linkedin.com/in/gladysyuliastephh/"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="cv-contact-link">
+                                    <i class="bi bi-linkedin"></i> linkedin.com/in/gladysyuliastephh
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Skills -->
+                    <!-- Keahlian -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Keahlian Utama (Skills)</h2>
                         <div class="skills-list">
@@ -84,9 +112,87 @@
                         </div>
                     </div>
 
-                    <!-- Experience & Projects -->
+                    <!-- Pengalaman & Proyek Utama -->
                     <div class="cv-section">
-                        <h2 class="cv-section-title">Pengalaman & Proyek Utama</h2>
+                        <h2 class="cv-section-title">Pengalaman</h2>
+                        <div class="cv-grid-2">
+                            <div class="cv-info-item">
+                                <h3>Glumina AI Platform</h3>
+                                <p>Merancang dan mengimplementasikan antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
+                            </div>
+                            <div class="cv-info-item">
+                                <h3>UI/UX Designer Freelance</h3>
+                                <p>Mengembangun desain untuk pengembangan website company PT. Alltech Sarana Samudera dan Tempt Penginapan Drajih Nature Camp.</p>
+                            </div>
+                                <div class="cv-info-item">
+                                <h3>Divisi Humas Departemen Ilmu Pengetahuan dan Teknologi BEM IT Del</h3>
+                                <p>Menjadi jembatan antar internal DIPTEK BEM IT Del dengan pihak institut, departemen lain, dan publik dalam membagikan dan menyalurkan informasi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pendidikan -->
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Pendidikan</h2>
+                        <div class="cv-info-item">
+                            <h3>Institut Teknologi Del</h3>
+                            <p>Sarjana Terapan / Sarjana Komputer &mdash; Praktikum Pengoperasian &amp; Aplikasi Berbasis Web (PABWE 2026)</p>
+                        </div>
+                    </div>
+
+                    <!-- Sertifikat & Penghargaan -->
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Sertifikat &amp; Penghargaan</h2>
+
+                        <!-- Dicoding -->
+                        <div class="cv-info-item">
+                            <h3>Dicoding</h3>
+                            <ul class="cv-cert-list">
+                                <li>
+                                    <span class="cv-cert-name">Belajar Dasar Pembuatan Web</span>
+                                    <span class="cv-cert-date">November 2026</span>
+                                </li>
+                                <li>
+                                    <span class="cv-cert-name">Menjadi React Web Developer Expert</span>
+                                    <span class="cv-cert-date">Desember 2025</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Nalara Academy -->
+                        <div class="cv-info-item">
+                            <h3>Nalara Academy</h3>
+                            <ul class="cv-cert-list">
+                                <li>
+                                    <span class="cv-cert-name">AI &amp; Deep Learning Acceleration</span>
+                                    <span class="cv-cert-date">Juli 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- IBM SkillsBuild -->
+                        <div class="cv-info-item">
+                            <h3>IBM SkillsBuild</h3>
+                            <ul class="cv-cert-list">
+                                <li>
+                                    <span class="cv-cert-name">Introduction to Large Language Models</span>
+                                    <span class="cv-cert-date">Agustus 2026</span>
+                                </li>
+                                <li>
+                                    <span class="cv-cert-name">IBM Granite Models for Software Development</span>
+                                    <span class="cv-cert-date">Agustus 2026</span>
+                                </li>
+                                <li>
+                                    <span class="cv-cert-name">Build an AI Agent</span>
+                                    <span class="cv-cert-date">September 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Proyek / Portfolio -->
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Proyek / Portfolio</h2>
                         <div class="cv-grid-2">
                             <div class="cv-info-item">
                                 <h3>Glumina AI Platform</h3>
@@ -96,18 +202,22 @@
                                 <h3>Computer Vision Analytics Engine</h3>
                                 <p>Mengembangkan pipeline deteksi citra dan OCR untuk klasifikasi visual dokumen bisnis secara otomatis.</p>
                             </div>
+                            <div class="cv-info-item">
+                                <h3>FoodLoop</h3>
+                                <p>Third party platform for reducing wasted food — menghubungkan konsumen, restoran, dan pengelola limbah makanan untuk meminimalkan food waste secara digital.</p>
+                            </div>
+                            <div class="cv-info-item">
+                                <h3>SianAI</h3>
+                                <p>AI Finance Web-based — platform keuangan berbasis kecerdasan buatan untuk analisis pengeluaran, perencanaan anggaran, dan rekomendasi investasi personal.</p>
+                            </div>
+                            <div class="cv-info-item">
+                                <h3>Lapercuy</h3>
+                                <p>Digital Canteen — sistem kantin digital terintegrasi untuk pemesanan makanan, manajemen stok, dan pembayaran cashless di lingkungan kampus.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Education -->
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Pendidikan</h2>
-                        <div class="cv-info-item">
-                            <h3>Institut Teknologi Del</h3>
-                            <p>Sarjana Terapan / Sarjana Komputer &mdash; Praktikum Pengoperasian & Aplikasi Berbasis Web (PABWE 2026)</p>
-                        </div>
-                    </div>
-                </div>
+                </div><!-- /cv-card -->
             </div>
         </section>
     </main>
