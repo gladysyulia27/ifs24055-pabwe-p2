@@ -6,56 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Curriculum Vitae — Gladys Yulia Stephanie Manurung.">
     <title>Glumina — Curriculum Vitae (CV)</title>
-
-    <!-- Google Fonts: Inter & Bitcount Single -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logoglumina.png">
-
-    <!-- External Stylesheet -->
     <link rel="stylesheet" href="styles/app.css">
+    <style>
+        #nav-toggle-checkbox {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-toggle {
+                display: flex !important;
+            }
+
+            #nav-toggle-checkbox:checked~.main-nav {
+                transform: translateY(0) !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- 1. NAV / HEADER -->
     <header class="site-header" id="header">
         <div class="header-container">
             <a href="index.html" class="brand-logo" aria-label="Glumina Home">
                 <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
                 <span class="brand-name">glumina</span>
             </a>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-
-            <!-- Navigation Menu -->
+            <input type="checkbox" id="nav-toggle-checkbox">
+            <label for="nav-toggle-checkbox" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </label>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
-                    <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
-                    <li class="nav-item"><a href="cv.html" class="nav-link active">CV</a></li>
-                    <li class="nav-item mobile-nav-cta">
-                        <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
-                    </li>
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
+                    <li><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
+                    <li><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li><a href="cv.html" class="nav-link active">CV</a></li>
+                    <li class="mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
                 </ul>
             </nav>
-
-            <div class="header-action">
-                <a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a>
-            </div>
+            <div class="header-action"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></div>
         </div>
     </header>
 
@@ -63,234 +60,123 @@
         <section class="cv-hero">
             <div class="section-container">
                 <div class="cv-card">
-
-                    <!-- Profile Header -->
                     <div class="cv-header">
-                        <img src="assets/images/profilcv.png" alt="Foto profil Gladys Manurung" class="cv-avatar">
+                        <img src="assets/images/profilcv.png" alt="Gladys Manurung" class="cv-avatar">
                         <div class="cv-title-group">
                             <h1>Gladys Yulia Stephanie Manurung</h1>
                             <p class="cv-role">Aspiring AI Engineer &amp; Full-Stack Web Developer</p>
-                            <p class="cv-bio">
-                                Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur
-                                kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern berperforma tinggi.
-                            </p>
-
-                            <!-- Kontak -->
+                            <p class="cv-bio">Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern.</p>
                             <div class="cv-contacts">
-                                <a href="mailto:gladysyulia27@gmail.com" class="cv-contact-link">
-                                    <i class="bi bi-envelope-fill"></i> gladysyulia27@gmail.com
-                                </a>
-                                <a href="tel:+6281221910971" class="cv-contact-link">
-                                    <i class="bi bi-whatsapp"></i> +62 812-2191-0971
-                                </a>
-                                <a href="https://github.com/gladysyulia27"
-                                   target="_blank" rel="noopener noreferrer"
-                                   class="cv-contact-link">
-                                    <i class="bi bi-github"></i> github.com/gladysyulia27
-                                </a>
-                                <a href="https://www.linkedin.com/in/gladysyuliastephh/"
-                                   target="_blank" rel="noopener noreferrer"
-                                   class="cv-contact-link">
-                                    <i class="bi bi-linkedin"></i> linkedin.com/in/gladysyuliastephh
-                                </a>
+                                <a href="mailto:gladysyulia27@gmail.com" class="cv-contact-link"><i class="bi bi-envelope-fill"></i> gladysyulia27@gmail.com</a>
+                                <a href="https://github.com/gladysyulia27" target="_blank" class="cv-contact-link"><i class="bi bi-github"></i> github.com/gladysyulia27</a>
+                                <a href="https://www.linkedin.com/in/gladysyuliastephh/" target="_blank" class="cv-contact-link"><i class="bi bi-linkedin"></i> linkedin.com/in/gladysyuliastephh</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Keahlian -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Keahlian Utama (Skills)</h2>
                         <div class="skills-list">
-                            <span class="skill-badge">Artificial Intelligence</span>
-                            <span class="skill-badge">Computer Vision</span>
-                            <span class="skill-badge">Natural Language Processing</span>
-                            <span class="skill-badge">Full-Stack Web Development</span>
-                            <span class="skill-badge">JavaScript (ES6+)</span>
-                            <span class="skill-badge">CSS3 / Glassmorphism</span>
-                            <span class="skill-badge">UI/UX Interaction</span>
-                            <span class="skill-badge">Python / PyTorch</span>
+                            <span class="skill-badge">Artificial Intelligence</span><span class="skill-badge">Computer Vision</span><span class="skill-badge">NLP</span><span class="skill-badge">Full-Stack Web</span><span class="skill-badge">JavaScript</span><span class="skill-badge">CSS3 / Glassmorphism</span><span class="skill-badge">UI/UX</span><span class="skill-badge">Python / PyTorch</span>
                         </div>
                     </div>
 
-                    <!-- Pengalaman & Proyek Utama -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Pengalaman</h2>
                         <div class="cv-grid-2">
                             <div class="cv-info-item">
                                 <h3>Glumina AI Platform</h3>
-                                <p>Merancang dan mengimplementasikan antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
+                                <p>Merancang antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
                             </div>
                             <div class="cv-info-item">
                                 <h3>UI/UX Designer Freelance</h3>
-                                <p>Mengembangun desain untuk pengembangan website company PT. Alltech Sarana Samudera dan Tempt Penginapan Drajih Nature Camp.</p>
+                                <p>Mengembangun desain website company PT. Alltech Sarana Samudera dan Drajih Nature Camp.</p>
                             </div>
-                                <div class="cv-info-item">
-                                <h3>Divisi Humas Departemen Ilmu Pengetahuan dan Teknologi BEM IT Del</h3>
-                                <p>Menjadi jembatan antar internal DIPTEK BEM IT Del dengan pihak institut, departemen lain, dan publik dalam membagikan dan menyalurkan informasi.</p>
+                            <div class="cv-info-item">
+                                <h3>Humas DIPTEK BEM IT Del</h3>
+                                <p>Menjadi jembatan internal DIPTEK BEM IT Del dengan pihak institut dan publik.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pendidikan -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Pendidikan</h2>
                         <div class="cv-info-item">
                             <h3>Institut Teknologi Del</h3>
-                            <p>Sarjana Terapan / Sarjana Komputer &mdash; Praktikum Pengoperasian &amp; Aplikasi Berbasis Web (PABWE 2026)</p>
+                            <p>Sarjana Terapan Komputer &mdash; Praktikum Pengembangan Aplikasi Berbasis Web (2026)</p>
                         </div>
                     </div>
 
-                    <!-- Sertifikat & Penghargaan -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Sertifikat &amp; Penghargaan</h2>
-
-                        <!-- Dicoding -->
                         <div class="cv-info-item">
-                            <h3>Dicoding</h3>
+                            <h3>Dicoding &amp; Nalara Academy</h3>
                             <ul class="cv-cert-list">
-                                <li>
-                                    <span class="cv-cert-name">Belajar Dasar Pembuatan Web</span>
-                                    <span class="cv-cert-date">November 2026</span>
-                                </li>
-                                <li>
-                                    <span class="cv-cert-name">Menjadi React Web Developer Expert</span>
-                                    <span class="cv-cert-date">Desember 2025</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Nalara Academy -->
-                        <div class="cv-info-item">
-                            <h3>Nalara Academy</h3>
-                            <ul class="cv-cert-list">
-                                <li>
-                                    <span class="cv-cert-name">AI &amp; Deep Learning Acceleration</span>
-                                    <span class="cv-cert-date">Juli 2026</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- IBM SkillsBuild -->
-                        <div class="cv-info-item">
-                            <h3>IBM SkillsBuild</h3>
-                            <ul class="cv-cert-list">
-                                <li>
-                                    <span class="cv-cert-name">Introduction to Large Language Models</span>
-                                    <span class="cv-cert-date">Agustus 2026</span>
-                                </li>
-                                <li>
-                                    <span class="cv-cert-name">IBM Granite Models for Software Development</span>
-                                    <span class="cv-cert-date">Agustus 2026</span>
-                                </li>
-                                <li>
-                                    <span class="cv-cert-name">Build an AI Agent</span>
-                                    <span class="cv-cert-date">September 2026</span>
-                                </li>
+                                <li><span class="cv-cert-name">Belajar Dasar Pembuatan Web</span><span class="cv-cert-date">Nov 2026</span></li>
+                                <li><span class="cv-cert-name">AI &amp; Deep Learning Acceleration</span><span class="cv-cert-date">Jul 2026</span></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Proyek / Portfolio -->
                     <div class="cv-section">
                         <h2 class="cv-section-title">Proyek / Portfolio</h2>
                         <div class="cv-grid-2">
                             <div class="cv-info-item">
-                                <h3>Glumina AI Platform</h3>
-                                <p>Merancang dan mengimplementasikan antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
-                            </div>
-                            <div class="cv-info-item">
-                                <h3>Computer Vision Analytics Engine</h3>
-                                <p>Mengembangkan pipeline deteksi citra dan OCR untuk klasifikasi visual dokumen bisnis secara otomatis.</p>
-                            </div>
-                            <div class="cv-info-item">
                                 <h3>FoodLoop</h3>
-                                <p>Third party platform for reducing wasted food — menghubungkan konsumen, restoran, dan pengelola limbah makanan untuk meminimalkan food waste secara digital.</p>
+                                <p>Third party platform for reducing wasted food secara digital.</p>
                             </div>
                             <div class="cv-info-item">
                                 <h3>SianAI</h3>
-                                <p>AI Finance Web-based — platform keuangan berbasis kecerdasan buatan untuk analisis pengeluaran, perencanaan anggaran, dan rekomendasi investasi personal.</p>
-                            </div>
-                            <div class="cv-info-item">
-                                <h3>Lapercuy</h3>
-                                <p>Digital Canteen — sistem kantin digital terintegrasi untuk pemesanan makanan, manajemen stok, dan pembayaran cashless di lingkungan kampus.</p>
+                                <p>AI Finance Web-based untuk analisis pengeluaran dan anggaran.</p>
                             </div>
                         </div>
                     </div>
-
-                </div><!-- /cv-card -->
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" id="kontak">
         <div class="section-container">
             <div class="footer-top">
                 <div class="footer-col footer-brand-col">
-                    <div class="footer-brand">
-                        <img src="assets/images/luminalogo.gif" alt="Glumina Logo" class="footer-logo">
-                        <span class="footer-brand-name">glumina</span>
-                    </div>
-                    <p class="footer-tagline">
-                        Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.
-                    </p>
+                    <div class="footer-brand"><img src="assets/images/luminalogo.gif" alt="Logo" class="footer-logo"><span class="footer-brand-name">glumina</span></div>
+                    <p class="footer-tagline">Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.</p>
                 </div>
-
                 <div class="footer-col">
                     <p class="footer-heading font-bitcount">Navigasi</p>
                     <ul class="footer-nav">
                         <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="index.html#layanan" class="footer-link">Service</a></li>
-                        <li><a href="index.html#tentang" class="footer-link">About Us</a></li>
-                        <li><a href="blog.html" class="footer-link">Blog</a></li>
-                        <li><a href="cv.html" class="footer-link">CV</a></li>
-                        <li><a href="index.html#cta" class="footer-link">Contact</a></li>
+                        <li><a href="#layanan" class="footer-link">Service</a></li>
+                        <li><a href="#tentang" class="footer-link">About Us</a></li>
+                        <li><a href="#cta" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <p class="footer-heading font-bitcount">Layanan AI</p>
                     <ul class="footer-nav">
-                        <li><a href="index.html#service-image-gen" class="footer-link">Image Generation</a></li>
-                        <li><a href="index.html#service-comp-vision" class="footer-link">Computer Vision</a></li>
-                        <li><a href="index.html#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
-                        <li><a href="index.html#service-automation" class="footer-link">Business Automation</a></li>
-                        <li><a href="index.html#service-analysis" class="footer-link">Analysis Prediction</a></li>
+                        <li><a href="#service-image-gen" class="footer-link">Image Generation</a></li>
+                        <li><a href="#service-comp-vision" class="footer-link">Computer Vision</a></li>
+                        <li><a href="#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
+                        <li><a href="#service-automation" class="footer-link">Business Automation</a></li>
+                        <li><a href="#service-analysis" class="footer-link">Analysis Prediction</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <p class="footer-heading font-bitcount">Hubungi Kami</p>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <span class="contact-label">Email:</span>
-                            <a href="mailto:info@glumina.ai" class="contact-val">info@glumina.ai</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">Lokasi:</span>
-                            <span class="contact-val">Laguboti, Toba, Sumatera Utara</span>
-                        </li>
+                    <ul class="footer-contact">
+                        <li><strong>Email:</strong> contact@glumina.ai</li>
+                        <li><strong>Telepon:</strong> +62 (21) 8089-2026</li>
+                        <li><strong>Lokasi:</strong> Laguboti, Toba, Sumatera Utara, Indonesia</li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p class="copyright-text">
-                    &copy; 2026 Glumina Technology Inc. All rights reserved.
-                </p>
+                <p class="footer-copyright">&copy; 2026 Glumina AI Technologies. Seluruh Hak Cipta Dilindungi.</p>
+                <p class="footer-academic">Praktikum Pengembangan Aplikasi Berbasis Web (PABWE)</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const mainNav = document.getElementById('mainNav');
-        if (navToggle && mainNav) {
-            navToggle.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
-            });
-        }
-    </script>
 </body>
 
 </html>
