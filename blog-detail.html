@@ -45,149 +45,123 @@
 
     <main>
         <section class="article-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10">
+            <div class="section-container">
+                <a href="blog.html" class="back-link">
+                    <i class="bi bi-arrow-left"></i> Kembali ke Daftar Artikel
+                </a>
 
-                        <!-- Back to blog link -->
-                        <a href="blog.html" class="back-link">
-                            <i class="bi bi-arrow-left"></i> Kembali ke Daftar Artikel
-                        </a>
-
-                        <!-- Article Header -->
-                        <div class="text-center mb-4">
-                            <div id="articleBadge" class="article-header-badge">
-                                <i id="categoryIcon" class="bi bi-cpu"></i> <span id="categoryName">Generative AI</span>
-                            </div>
-                            <h1 id="articleTitle" class="article-hero-title">
-                                Masa Depan Generative AI dalam Transformasi Desain Digital & Produksi Media
-                            </h1>
-
-                            <!-- Article Meta info -->
-                            <div class="bs-card-meta justify-content-center text-center">
-                                <span class="bs-card-meta-item">
-                                    <i class="bi bi-person-circle"></i> <span id="articleAuthor">Tim R&D Glumina</span>
-                                </span>
-                                <span>&bull;</span>
-                                <span class="bs-card-meta-item">
-                                    <i class="bi bi-calendar3"></i> <span id="articleDate">16 Sept 2026</span>
-                                </span>
-                                <span>&bull;</span>
-                                <span class="bs-card-meta-item">
-                                    <i class="bi bi-clock"></i> <span id="articleReadTime">5 menit baca</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- Featured Cover Image -->
-                        <img id="articleCover" src="assets/images/fitur/imagegenerate.png" alt="Article Cover" class="article-cover-img">
-
-                        <!-- Main Content & Sidebar Layout -->
-                        <div class="row g-4">
-                            <!-- Left / Center: Article Content -->
-                            <div class="col-12 col-lg-8">
-
-                                <!-- Key Takeaways Box -->
-                                <div class="key-takeaways-card">
-                                    <h2 class="key-takeaways-title">
-                                        <i class="bi bi-lightbulb-fill"></i> Poin Kunci (Key Takeaways)
-                                    </h2>
-                                    <ul id="keyTakeawaysList" class="mb-0">
-                                        <li>Generative AI memangkas siklus ideasi visual dari hitungan minggu menjadi jam.</li>
-                                        <li>Pengawasan parameter ketat menjamin hasil sintesis gambar sesuai brand guideline.</li>
-                                        <li>Integrasi API memungkinkan pembuatan aset pemasaran berskala masif secara otomatis.</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Dynamic Body Content -->
-                                <div id="articleBody" class="article-body-text">
-                                    <!-- Populated via JavaScript -->
-                                </div>
-
-                                <!-- Share & Action Bar -->
-                                <div class="share-bar">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="text-white fw-bold"><i class="bi bi-heart-fill text-danger me-1"></i> Suka artikel ini?</span>
-                                    </div>
-                                    <div class="share-btn-group">
-                                        <button class="btn-action-icon" onclick="alert('Artikel berhasil disukai!')">
-                                            <i class="bi bi-hand-thumbs-up"></i> Suka
-                                        </button>
-                                        <button class="btn-action-icon" onclick="navigator.clipboard.writeText(window.location.href); alert('Tautan artikel berhasil disalin!');">
-                                            <i class="bi bi-share"></i> Bagikan
-                                        </button>
-                                        <button class="btn-action-icon" onclick="alert('Artikel disimpan ke daftar bacaan!')">
-                                            <i class="bi bi-bookmark"></i> Simpan
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Author Card -->
-                                <div class="article-author-card">
-                                    <div class="article-author-avatar">
-                                        <i class="bi bi-cpu-fill"></i>
-                                    </div>
-                                    <div>
-                                        <p id="authorCardName" class="text-white mb-1 fw-bold">Tim R&D Glumina</p>
-                                        <p class="text-muted small mb-0"> Tim ahli dan ilmuwan kecerdasan buatan Glumina Technology yang berfokus pada riset Deep Learning, Computer Vision, dan arsitektur LLM modern.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Right: Sidebar Sticky Navigation & Info -->
-                            <div class="col-12 col-lg-4">
-                                <div class="sticky-top" style="top: 100px;">
-
-                                    <!-- AI Solutions Banner -->
-                                    <div class="card bs-blog-card p-4 mb-4 text-center">
-                                        <i class="bi bi-rocket-takeoff text-cyan mb-2" style="font-size: 2.5rem; color: var(--cyan-accent);"></i>
-                                        <p class="text-white fs-5 fw-bold mb-2">Ingin Mengimplementasikan AI di Bisnis Anda?</p>
-                                        <p class="text-muted small mb-3">Tim Glumina siap membantu membangun solusi kecerdasan buatan terdedikasi sesuai kebutuhan spesifik industri Anda.</p>
-                                        <a href="index.html#cta" class="btn btn-pill btn-primary w-100">
-                                            <i class="bi bi-chat-text-fill"></i> Konsultasi Gratis
-                                        </a>
-                                    </div>
-
-                                    <!-- Article Categories Quick Box -->
-                                    <div class="card bs-blog-card p-4">
-                                        <p class="text-white fs-6 fw-bold mb-3">
-                                            <i class="bi bi-tags-fill text-gold me-2"></i> Topik Populer AI
-                                        </p>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <a href="blog.html" class="category-pill py-1 px-3 fs-7 text-decoration-none">
-                                                <i class="bi bi-magic"></i> Generative AI
-                                            </a>
-                                            <a href="blog.html" class="category-pill py-1 px-3 fs-7 text-decoration-none">
-                                                <i class="bi bi-eye"></i> Computer Vision
-                                            </a>
-                                            <a href="blog.html" class="category-pill py-1 px-3 fs-7 text-decoration-none">
-                                                <i class="bi bi-robot"></i> Chatbot AI
-                                            </a>
-                                            <a href="blog.html" class="category-pill py-1 px-3 fs-7 text-decoration-none">
-                                                <i class="bi bi-diagram-3"></i> Otomasi Bisnis
-                                            </a>
-                                            <a href="blog.html" class="category-pill py-1 px-3 fs-7 text-decoration-none">
-                                                <i class="bi bi-graph-up-arrow"></i> Predictive Analytics
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Related Articles Section (Bootstrap Cards) -->
-                        <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
-                            <h2 class="related-title">
-                                <i class="bi bi-journal-bookmark-fill me-2 text-cyan"></i> Artikel Terkait Lainnya
-                            </h2>
-                            <div class="row g-4" id="relatedArticlesRow">
-                                <!-- Populated dynamically by JS -->
-                            </div>
-                        </div>
-
+                <div class="text-center mb-4">
+                    <div id="articleBadge" class="article-header-badge">
+                        <i id="categoryIcon" class="bi bi-cpu"></i> <span id="categoryName">Generative AI</span>
                     </div>
+                    <h1 id="articleTitle" class="article-hero-title">
+                        Masa Depan Generative AI dalam Transformasi Desain Digital & Produksi Media
+                    </h1>
+                    <div class="bs-card-meta justify-content-center text-center">
+                        <span class="bs-card-meta-item">
+                            <i class="bi bi-person-circle"></i> <span id="articleAuthor">Tim R&D Glumina</span>
+                        </span>
+                        <span>&bull;</span>
+                        <span class="bs-card-meta-item">
+                            <i class="bi bi-calendar3"></i> <span id="articleDate">16 Sept 2026</span>
+                        </span>
+                        <span>&bull;</span>
+                        <span class="bs-card-meta-item">
+                            <i class="bi bi-clock"></i> <span id="articleReadTime">5 menit baca</span>
+                        </span>
+                    </div>
+                </div>
+
+                <img id="articleCover" src="assets/images/fitur/imagegenerate.png" alt="Article Cover" class="article-cover-img">
+
+                <div class="article-layout">
+                    <article class="article-main">
+                        <div class="key-takeaways-card">
+                            <h2 class="key-takeaways-title">
+                                <i class="bi bi-lightbulb-fill"></i> Poin Kunci (Key Takeaways)
+                            </h2>
+                            <ul id="keyTakeawaysList" class="mb-0">
+                                <li>Generative AI memangkas siklus ideasi visual dari hitungan minggu menjadi jam.</li>
+                                <li>Pengawasan parameter ketat menjamin hasil sintesis gambar sesuai brand guideline.</li>
+                                <li>Integrasi API memungkinkan pembuatan aset pemasaran berskala masif secara otomatis.</li>
+                            </ul>
+                        </div>
+
+                        <div id="articleBody" class="article-body-text"></div>
+                    </article>
+
+                    <aside class="article-sidebar" aria-label="Topik dan solusi AI">
+                        <div class="article-sidebar-sticky">
+                            <div class="article-sidebar-card">
+                                <h2 class="article-sidebar-title">
+                                    <i class="bi bi-tags-fill text-gold"></i> Topik Populer AI
+                                </h2>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-magic"></i> Generative AI
+                                    </a>
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-eye"></i> Computer Vision
+                                    </a>
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-robot"></i> Chatbot AI
+                                    </a>
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-diagram-3"></i> Otomasi Bisnis
+                                    </a>
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-graph-up-arrow"></i> Predictive Analytics
+                                    </a>
+                                    <a href="blog.html" class="category-pill">
+                                        <i class="bi bi-people"></i> Women in Data
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="article-cta-banner">
+                                <i class="bi bi-rocket-takeoff article-cta-icon" aria-hidden="true"></i>
+                                <h2 class="article-cta-title">Ingin Mengimplementasikan AI di Bisnis Anda?</h2>
+                                <p class="article-cta-text">Tim Glumina siap membantu membangun solusi kecerdasan buatan terdedikasi sesuai kebutuhan spesifik industri Anda.</p>
+                                <a href="index.html#cta" class="btn btn-pill btn-primary w-100">
+                                    <i class="bi bi-chat-text-fill"></i> Konsultasi Gratis
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="share-bar">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-white fw-bold"><i class="bi bi-heart-fill text-danger me-1"></i> Suka artikel ini?</span>
+                    </div>
+                    <div class="share-btn-group">
+                        <button type="button" class="btn-action-icon" onclick="alert('Artikel berhasil disukai!')">
+                            <i class="bi bi-hand-thumbs-up"></i> Suka
+                        </button>
+                        <button type="button" class="btn-action-icon" onclick="navigator.clipboard.writeText(window.location.href); alert('Tautan artikel berhasil disalin!');">
+                            <i class="bi bi-share"></i> Bagikan
+                        </button>
+                        <button type="button" class="btn-action-icon" onclick="alert('Artikel disimpan ke daftar bacaan!')">
+                            <i class="bi bi-bookmark"></i> Simpan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="article-author-card">
+                    <div class="article-author-avatar">
+                        <i class="bi bi-cpu-fill"></i>
+                    </div>
+                    <div>
+                        <p id="authorCardName" class="text-white mb-1 fw-bold">Tim R&D Glumina</p>
+                        <p class="article-author-bio mb-0">Tim ahli dan ilmuwan kecerdasan buatan Glumina Technology yang berfokus pada riset Deep Learning, Computer Vision, dan arsitektur LLM modern.</p>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h2 class="related-title">
+                        <i class="bi bi-journal-bookmark-fill me-2"></i> Artikel Terkait Lainnya
+                    </h2>
+                    <div class="row g-4" id="relatedArticlesRow"></div>
                 </div>
             </div>
         </section>
@@ -255,7 +229,7 @@
                 author: "Tim R&D Glumina",
                 date: "16 September 2026",
                 readTime: "5 menit baca",
-                cover: "assets/images/fitur/imagegenerate.png",
+                cover: "assets/images/article/gen ai.jpg",
                 takeaways: [
                     "Generative AI memangkas siklus ideasi visual dari hitungan minggu menjadi jam.",
                     "Pengawasan parameter ketat menjamin hasil sintesis gambar sesuai brand guideline.",
@@ -298,6 +272,37 @@
                     </p>
                 `
             },
+            "women-in-data": {
+                id: "women-in-data",
+                category: "Women in Data",
+                categoryIcon: "bi-people",
+                title: "Peran Strategis Women in Data dalam Akselerasi Inovasi AI & Analitik",
+                author: "Gladys Yulia Stephanie Manurung",
+                date: "19 September 2026",
+                readTime: "6 menit",
+                cover: "assets/images/article/Women in data.jpg",
+                takeaways: [
+                    "Keberagaman gender meningkatkan objektivitas model AI.",
+                    "Women in Data memimpin inovasi etika AI dan solusi bisnis.",
+                    "Mentorship dan komunitas memperkuat karier perempuan di STEM."
+                ],
+                content: `
+            <h2>Mengapa Keberagaman Gender Penting dalam Sains Data?</h2>
+            <p>Algoritma kecerdasan buatan dan model prediktif dibentuk berdasarkan data historis. Jika data tersebut dikumpulkan dan dianalisis tanpa perspektif yang beragam, sistem AI yang dihasilkan rentan terhadap bias.</p>
+            <p>Kehadiran perempuan dalam tim pengembang data membawa sudut pandang unik yang membantu mengidentifikasi titik-titik buta (blind spots) dalam pengambilan keputusan. Keberagaman gender terbukti meningkatkan objektivitas dalam perancangan model machine learning, terutama pada sektor-sektor sensitif seperti layanan kesehatan, finansial, dan kebijakan publik.</p>
+            <h2>Kontribusi Nyata Women in Data di Era Modern</h2>
+            <p>Saat ini, banyak perempuan memegang peran krusial sebagai Data Scientist, AI Engineer, hingga Chief Data Officer di berbagai perusahaan multinasional maupun startup teknologi. Beberapa kontribusi utamanya meliputi:</p>
+            <ul>
+                <li><strong>Pengembangan Etika AI:</strong> Memastikan bahwa sistem otomatisasi dan algoritma yang dibangun mematuhi standar etika serta melindungi privasi data pengguna secara adil.</li>
+                <li><strong>Inovasi Berkelanjutan:</strong> Memimpin riset pemanfaatan data untuk memecahkan masalah sosial, seperti mitigasi perubahan iklim dan efisiensi rantai pasok global.</li>
+                <li><strong>Mentorship & Komunitas:</strong> Membangun ekosistem kolaboratif melalui berbagai komunitas global yang mendukung lebih banyak perempuan muda untuk berkarier di bidang STEM (Science, Technology, Engineering, and Mathematics).</li>
+            </ul>
+            <h2>Tantangan dan Langkah ke Depan</h2>
+            <p>Meskipun kemajuan telah dicapai, tantangan seperti bias struktural dan kesenjangan representasi masih perlu diatasi. Institusi pendidikan dan perusahaan teknologi harus terus berkomitmen untuk menciptakan lingkungan kerja yang setara, transparan, dan mendukung pengembangan karier perempuan di sektor teknologi.</p>
+            <h2>Kesimpulan</h2>
+            <p>Masa depan kecerdasan buatan tidak boleh hanya ditentukan oleh satu sudut pandang saja. Dengan merangkul potensi penuh dari Women in Data, kita tidak hanya menciptakan ekosistem industri yang lebih adil, tetapi juga membuka peluang inovasi tanpa batas demi kemajuan peradaban manusia bersama.</p>
+        `
+            },
 
             "computer-vision": {
                 id: "computer-vision",
@@ -307,7 +312,7 @@
                 author: "Dr. Aris Setiawan (Lead Computer Vision Engineer)",
                 date: "14 September 2026",
                 readTime: "7 menit baca",
-                cover: "assets/images/fitur/compvision.png",
+                cover: "assets/images/article/Computer Vision.jpg",
                 takeaways: [
                     "Deteksi cacat visual presisi mikron meningkatkan standar kontrol kualitas manufaktur.",
                     "Pemrosesan Edge AI memastikan analisis video real-time dengan latensi terendah (<15ms).",
@@ -359,7 +364,7 @@
                 author: "Maya Putri (Head of AI Solutions)",
                 date: "10 September 2026",
                 readTime: "6 menit baca",
-                cover: "assets/images/fitur/chatassist.png",
+                cover: "assets/images/article/rag assist.jpg",
                 takeaways: [
                     "Retrieval-Augmented Generation (RAG) menghilangkan halusinasi teks pada AI enterprise.",
                     "Dukungan multibahasa alami meningkatkan kepuasan pelanggan secara global.",

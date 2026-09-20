@@ -1013,6 +1013,10 @@ ul {
     margin-bottom: 24px;
 }
 
+.article-body-text .text-white-50 {
+    color: #c0c6d4 !important;
+}
+
 .article-body-text h2 {
     color: #ffffff;
     font-size: 1.6rem;
@@ -1350,5 +1354,300 @@ ul {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* =============================================
+   BLOG DETAIL PAGE — ADDITIONAL COMPONENTS
+   ============================================= */
+
+.article-section {
+    padding: calc(var(--header-height) + 40px) 0 80px;
+    min-height: 80vh;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+    gap: 32px;
+    align-items: start;
+}
+
+.article-sidebar-sticky {
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.article-sidebar-card,
+.article-cta-banner {
+    background: rgba(13, 17, 23, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.article-sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.article-cta-banner {
+    text-align: center;
+}
+
+.article-cta-icon {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--cyan-accent);
+    margin-bottom: 8px;
+}
+
+.article-cta-title {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.article-cta-text {
+    color: #c0c6d4;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.article-author-bio {
+    color: #c0c6d4;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.related-articles {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cyan-accent);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 36px;
+    transition: gap var(--transition-fast), color var(--transition-fast);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    gap: 12px;
+    color: #ffffff;
+}
+
+.key-takeaways-card {
+    background: rgba(56, 189, 248, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-left: 4px solid var(--cyan-accent);
+    border-radius: var(--radius-md);
+    padding: 28px 28px 24px;
+    margin-bottom: 36px;
+}
+
+.key-takeaways-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.key-takeaways-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-takeaways-card ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: #c0c6d4;
+    line-height: 1.6;
+}
+
+.key-takeaways-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--cyan-accent);
+    font-weight: 700;
+}
+
+.article-body-text h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 32px 0 14px;
+}
+
+.article-body-text ul,
+.article-body-text ol {
+    padding-left: 24px;
+    margin-bottom: 24px;
+    color: #c0c6d4;
+}
+
+.article-body-text li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.article-body-text strong {
+    color: #ffffff;
+}
+
+.ai-callout-box {
+    background: rgba(13, 17, 23, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    margin: 32px 0;
+}
+
+.ai-callout-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan-accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.share-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+    margin: 40px 0 20px;
+}
+
+.share-btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-action-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-pill);
+    padding: 8px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #a4abb8;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-action-icon:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: var(--cyan-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.article-author-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.article-author-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(232, 178, 89, 0.15));
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: var(--cyan-accent);
+}
+
+.related-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.bs-card-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.text-gold {
+    color: var(--gold-mid);
+}
+
+@media screen and (max-width: 768px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .article-sidebar-sticky {
+        position: static;
+    }
+
+    .article-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .share-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-author-card {
+        flex-direction: column;
+    }
+
+    .key-takeaways-card {
+        padding: 20px;
     }
 }
