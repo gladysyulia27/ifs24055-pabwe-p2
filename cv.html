@@ -6,177 +6,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Curriculum Vitae — Gladys Yulia Stephanie Manurung.">
     <title>Glumina — Curriculum Vitae (CV)</title>
+    <!-- Google Fonts: Inter & Bitcount Single -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/png" href="assets/images/logoglumina.png">
-    <link rel="stylesheet" href="styles/app.css">
-    <style>
-        #nav-toggle-checkbox {
-            display: none;
-        }
-
-        @media screen and (max-width: 768px) {
-            .nav-toggle {
-                display: flex !important;
-            }
-
-            #nav-toggle-checkbox:checked~.main-nav {
-                transform: translateY(0) !important;
-                opacity: 1 !important;
-                pointer-events: auto !important;
-            }
-        }
-    </style>
+    <!-- Tailwind CSS 4 Play CDN — utility-first styling engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <header class="site-header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="brand-logo" aria-label="Glumina Home">
-                <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
-                <span class="brand-name">glumina</span>
+<body class="bg-[#040507] text-white font-inter leading-relaxed overflow-x-hidden antialiased">
+
+    <!-- HEADER / NAVIGASI -->
+    <!-- Fixed header dengan glassmorphism backdrop-blur -->
+    <header class="fixed top-0 left-0 right-0 h-[80px] z-[1000] bg-[#040507]/75 backdrop-blur-[14px] border-b border-white/5" id="header">
+        <div class="relative max-w-[1240px] h-full mx-auto px-6 flex items-center justify-between">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group" aria-label="Glumina Home">
+                <img src="assets/images/luminalogo.gif" alt="Glumina Cloud Logo" class="w-8 object-contain drop-shadow-[0_0_10px_rgba(56,189,248,0.4)] transition-transform duration-200 group-hover:scale-110 group-hover:rotate-[5deg]">
+                <span class="text-[1.45rem] text-white">glumina</span>
             </a>
-            <input type="checkbox" id="nav-toggle-checkbox">
-            <label for="nav-toggle-checkbox" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
-                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+
+            <!-- Mobile Nav Toggle: CSS-only checkbox trick via Tailwind peer -->
+            <input type="checkbox" id="nav-toggle-checkbox" class="peer hidden">
+            <label for="nav-toggle-checkbox" class="md:hidden flex flex-col justify-between w-[26px] h-[18px] cursor-pointer z-[1001]" id="navToggle" aria-label="Buka Menu Navigasi">
+                <span class="w-full h-[2px] bg-white transition-all duration-200"></span>
+                <span class="w-full h-[2px] bg-white transition-all duration-200"></span>
+                <span class="w-full h-[2px] bg-white transition-all duration-200"></span>
             </label>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">HOME</a></li>
-                    <li><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
-                    <li><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
-                    <li><a href="blog.html" class="nav-link">BLOG</a></li>
-                    <li><a href="cv.html" class="nav-link active">CV</a></li>
-                    <li class="mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
+
+            <!-- Main Nav: mobile fullscreen overlay + desktop centered row -->
+            <!-- peer-checked:* digunakan untuk membuka menu saat checkbox aktif -->
+            <nav class="fixed inset-0 h-screen bg-[#040507]/98 -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-[999] flex flex-col justify-center peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:absolute md:inset-auto md:h-auto md:w-auto md:bg-transparent md:translate-y-0 md:opacity-100 md:pointer-events-auto md:flex-row md:items-center md:left-1/2 md:-translate-x-1/2" id="mainNav">
+                <ul class="flex flex-col md:flex-row items-center gap-8 md:gap-9 text-center">
+                    <li><a href="index.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">HOME<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
+                    <li><a href="index.html#layanan" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">SERVICE<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
+                    <li><a href="index.html#tentang" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">ABOUT<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
+                    <li><a href="blog.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">BLOG<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
+                    <!-- Link aktif (halaman saat ini): underline permanen -->
+                    <li><a href="cv.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-white relative pb-2 group">CV<span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8]"></span></a></li>
+                    <!-- CTA hanya tampil di mobile -->
+                    <li class="md:hidden mt-2"><a href="index.html#cta" class="inline-flex items-center justify-center gap-[10px] bg-white text-[#0b0c10] px-7 py-3 rounded-full font-semibold text-[0.85rem] tracking-[0.5px] shadow-[0_4px_18px_rgba(255,255,255,0.2)]">CONTACT US</a></li>
                 </ul>
             </nav>
-            <div class="header-action"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></div>
+
+            <!-- CTA Button (desktop only) -->
+            <div class="hidden md:block">
+                <a href="index.html#cta" class="inline-flex items-center justify-center gap-[10px] bg-white text-[#0b0c10] px-7 py-3 rounded-full font-semibold text-[0.85rem] tracking-[0.5px] transition-all duration-200 hover:-translate-y-[2px] hover:bg-[#eef1f6] hover:shadow-[0_8px_24px_rgba(255,255,255,0.35)] shadow-[0_4px_18px_rgba(255,255,255,0.2)]">CONTACT US</a>
+            </div>
+
         </div>
     </header>
+    <!-- END HEADER / NAVIGASI -->
 
     <main>
-        <section class="cv-hero">
-            <div class="section-container">
-                <div class="cv-card">
-                    <div class="cv-header">
-                        <img src="assets/images/profilcv.png" alt="Gladys Manurung" class="cv-avatar">
-                        <div class="cv-title-group">
-                            <h1>Gladys Yulia Stephanie Manurung</h1>
-                            <p class="cv-role">Aspiring AI Engineer &amp; Full-Stack Web Developer</p>
-                            <p class="cv-bio">Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern.</p>
-                            <div class="cv-contacts">
-                                <a href="mailto:gladysyulia27@gmail.com" class="cv-contact-link"><i class="bi bi-envelope-fill"></i> gladysyulia27@gmail.com</a>
-                                <a href="https://github.com/gladysyulia27" target="_blank" class="cv-contact-link"><i class="bi bi-github"></i> github.com/gladysyulia27</a>
-                                <a href="https://www.linkedin.com/in/gladysyuliastephh/" target="_blank" class="cv-contact-link"><i class="bi bi-linkedin"></i> linkedin.com/in/gladysyuliastephh</a>
+        <!-- SEKSI CV UTAMA -->
+        <section class="pt-[140px] pb-20">
+            <div class="w-full max-w-[1240px] mx-auto px-6">
+
+                <!-- Card CV: container utama dengan glassmorphism -->
+                <div class="bg-white/[.02] border border-white/[.08] rounded-3xl p-8 md:p-12 backdrop-blur-2xl max-w-[960px] mx-auto">
+
+                    <!-- Profil Header: foto, nama, role, kontak -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 border-b border-white/[.08] pb-10 mb-10">
+                        <!-- Avatar profil dengan glow border cyan -->
+                        <img src="assets/images/profilcv.png" alt="Gladys Manurung" class="w-[140px] h-[140px] rounded-full object-cover border-2 border-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.3)] flex-shrink-0">
+                        <div class="flex-1 min-w-0 text-center md:text-left">
+                            <h1 class="text-[2rem] sm:text-[2.2rem] font-medium text-white mb-2 leading-tight">
+                                Gladys Yulia Stephanie Manurung
+                            </h1>
+                            <!-- Judul profesi dengan font Bitcount & warna gold -->
+                            <p class="font-bitcount text-[#F5DCA6] text-[1.05rem] mb-3">
+                                Aspiring AI Engineer &amp; Full-Stack Web Developer
+                            </p>
+                            <p class="text-[#9ea4b0] text-[0.95rem] leading-relaxed">
+                                Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern.
+                            </p>
+                            <!-- Link kontak: email, GitHub, LinkedIn -->
+                            <div class="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 mt-4">
+                                <a href="mailto:gladysyulia27@gmail.com" class="inline-flex items-center gap-1.5 text-[0.82rem] text-[#9ea4b0] hover:text-cyan-400 transition-colors">
+                                    <i class="bi bi-envelope-fill text-cyan-400"></i> gladysyulia27@gmail.com
+                                </a>
+                                <a href="https://github.com/gladysyulia27" target="_blank" class="inline-flex items-center gap-1.5 text-[0.82rem] text-[#9ea4b0] hover:text-cyan-400 transition-colors">
+                                    <i class="bi bi-github text-cyan-400"></i> github.com/gladysyulia27
+                                </a>
+                                <a href="https://www.linkedin.com/in/gladysyuliastephh/" target="_blank" class="inline-flex items-center gap-1.5 text-[0.82rem] text-[#9ea4b0] hover:text-cyan-400 transition-colors">
+                                    <i class="bi bi-linkedin text-cyan-400"></i> linkedin.com/in/gladysyuliastephh
+                                </a>
                             </div>
                         </div>
                     </div>
+                    <!-- End Profil Header -->
 
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Keahlian Utama (Skills)</h2>
-                        <div class="skills-list">
-                            <span class="skill-badge">Artificial Intelligence</span><span class="skill-badge">Computer Vision</span><span class="skill-badge">NLP</span><span class="skill-badge">Full-Stack Web</span><span class="skill-badge">JavaScript</span><span class="skill-badge">CSS3 / Glassmorphism</span><span class="skill-badge">UI/UX</span><span class="skill-badge">Python / PyTorch</span>
+                    <!-- Seksi: Keahlian (Skills) — badge responsif dengan flex-wrap -->
+                    <div class="mb-10">
+                        <h2 class="font-bitcount text-xl text-white border-l-[3px] border-cyan-400 pl-3.5 mb-6">
+                            Keahlian Utama (Skills)
+                        </h2>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">Artificial Intelligence</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">Computer Vision</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">NLP</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">Full-Stack Web</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">JavaScript</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">CSS3 / Glassmorphism</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">UI/UX</span>
+                            <span class="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3.5 py-1.5 rounded-full text-[0.82rem] font-medium">Python / PyTorch</span>
                         </div>
                     </div>
+                    <!-- End Seksi Skills -->
 
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Pengalaman</h2>
-                        <div class="cv-grid-2">
-                            <div class="cv-info-item">
-                                <h3>Glumina AI Platform</h3>
-                                <p>Merancang antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
+                    <!-- Seksi: Pengalaman — grid responsif 1→2→3 kolom -->
+                    <div class="mb-10">
+                        <h2 class="font-bitcount text-xl text-white border-l-[3px] border-cyan-400 pl-3.5 mb-6">
+                            Pengalaman
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Item pengalaman -->
+                            <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                                <h3 class="text-[1.05rem] text-white mb-1.5">Glumina AI Platform</h3>
+                                <p class="text-[0.88rem] text-[#a4abb8]">Merancang antarmuka karusel interaktif infinite scroll dan arsitektur responsif untuk platform layanan AI.</p>
                             </div>
-                            <div class="cv-info-item">
-                                <h3>UI/UX Designer Freelance</h3>
-                                <p>Mengembangun desain website company PT. Alltech Sarana Samudera dan Drajih Nature Camp.</p>
+                            <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                                <h3 class="text-[1.05rem] text-white mb-1.5">UI/UX Designer Freelance</h3>
+                                <p class="text-[0.88rem] text-[#a4abb8]">Mengembangun desain website company PT. Alltech Sarana Samudera dan Drajih Nature Camp.</p>
                             </div>
-                            <div class="cv-info-item">
-                                <h3>Humas DIPTEK BEM IT Del</h3>
-                                <p>Menjadi jembatan internal DIPTEK BEM IT Del dengan pihak institut dan publik.</p>
+                            <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                                <h3 class="text-[1.05rem] text-white mb-1.5">Humas DIPTEK BEM IT Del</h3>
+                                <p class="text-[0.88rem] text-[#a4abb8]">Menjadi jembatan internal DIPTEK BEM IT Del dengan pihak institut dan publik.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- End Seksi Pengalaman -->
 
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Pendidikan</h2>
-                        <div class="cv-info-item">
-                            <h3>Institut Teknologi Del</h3>
-                            <p>Sarjana Terapan Komputer &mdash; Praktikum Pengembangan Aplikasi Berbasis Web (2026)</p>
+                    <!-- Seksi: Pendidikan -->
+                    <div class="mb-10">
+                        <h2 class="font-bitcount text-xl text-white border-l-[3px] border-cyan-400 pl-3.5 mb-6">
+                            Pendidikan
+                        </h2>
+                        <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                            <h3 class="text-[1.05rem] text-white mb-1.5">Institut Teknologi Del</h3>
+                            <p class="text-[0.88rem] text-[#a4abb8]">Sarjana Terapan Komputer &mdash; Praktikum Pengembangan Aplikasi Berbasis Web (2026)</p>
                         </div>
                     </div>
+                    <!-- End Seksi Pendidikan -->
 
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Sertifikat &amp; Penghargaan</h2>
-                        <div class="cv-info-item">
-                            <h3>Dicoding &amp; Nalara Academy</h3>
-                            <ul class="cv-cert-list">
-                                <li><span class="cv-cert-name">Belajar Dasar Pembuatan Web</span><span class="cv-cert-date">Nov 2026</span></li>
-                                <li><span class="cv-cert-name">AI &amp; Deep Learning Acceleration</span><span class="cv-cert-date">Jul 2026</span></li>
+                    <!-- Seksi: Sertifikat & Penghargaan — list dengan border separator -->
+                    <div class="mb-10">
+                        <h2 class="font-bitcount text-xl text-white border-l-[3px] border-cyan-400 pl-3.5 mb-6">
+                            Sertifikat &amp; Penghargaan
+                        </h2>
+                        <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                            <h3 class="text-[1.05rem] text-white mb-3">Dicoding &amp; Nalara Academy</h3>
+                            <!-- Daftar sertifikat: nama di kiri, tahun di kanan -->
+                            <ul>
+                                <li class="flex justify-between items-center py-2 border-b border-white/[.06] text-[0.88rem] text-[#a4abb8]">
+                                    <span>Belajar Dasar Pembuatan Web</span>
+                                    <span class="text-[#9ea4b0] text-[0.8rem]">Nov 2026</span>
+                                </li>
+                                <li class="flex justify-between items-center py-2 text-[0.88rem] text-[#a4abb8]">
+                                    <span>AI &amp; Deep Learning Acceleration</span>
+                                    <span class="text-[#9ea4b0] text-[0.8rem]">Jul 2026</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
+                    <!-- End Seksi Sertifikat -->
 
-                    <div class="cv-section">
-                        <h2 class="cv-section-title">Proyek / Portfolio</h2>
-                        <div class="cv-grid-2">
-                            <div class="cv-info-item">
-                                <h3>FoodLoop</h3>
-                                <p>Third party platform for reducing wasted food secara digital.</p>
+                    <!-- Seksi: Proyek / Portfolio — grid 2 kolom di md+ -->
+                    <div class="mb-0">
+                        <h2 class="font-bitcount text-xl text-white border-l-[3px] border-cyan-400 pl-3.5 mb-6">
+                            Proyek / Portfolio
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Item proyek -->
+                            <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                                <h3 class="text-[1.05rem] text-white mb-1.5">FoodLoop</h3>
+                                <p class="text-[0.88rem] text-[#a4abb8]">Third party platform for reducing wasted food secara digital.</p>
                             </div>
-                            <div class="cv-info-item">
-                                <h3>SianAI</h3>
-                                <p>AI Finance Web-based untuk analisis pengeluaran dan anggaran.</p>
+                            <div class="bg-white/[.03] border border-white/[.06] p-5 rounded-2xl">
+                                <h3 class="text-[1.05rem] text-white mb-1.5">SianAI</h3>
+                                <p class="text-[0.88rem] text-[#a4abb8]">AI Finance Web-based untuk analisis pengeluaran dan anggaran.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- End Seksi Portfolio -->
+
                 </div>
+                <!-- End Card CV -->
+
             </div>
         </section>
+        <!-- =================== END SEKSI CV UTAMA =================== -->
     </main>
 
-    <footer class="site-footer" id="kontak">
-        <div class="section-container">
-            <div class="footer-top">
-                <div class="footer-col footer-brand-col">
-                    <div class="footer-brand"><img src="assets/images/luminalogo.gif" alt="Logo" class="footer-logo"><span class="footer-brand-name">glumina</span></div>
-                    <p class="footer-tagline">Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.</p>
+    <!-- ===================== FOOTER ===================== -->
+    <!-- Grid 4 kolom: brand, navigasi, layanan, kontak -->
+    <footer class="bg-[#0a0c10] border-t border-white/10 pt-20 pb-8" id="kontak">
+        <div class="max-w-[1240px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+
+                <!-- Kolom Brand & Tagline -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="assets/images/luminalogo.gif" alt="Logo" class="w-9 object-contain drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]">
+                        <span class="text-white text-[1.55rem]">glumina</span>
+                    </div>
+                    <p class="text-[#9ea4b0] text-[0.9rem] leading-relaxed">Leading edge AI innovation where intuitive intelligence meets algorithmic precision for limitless scalability.</p>
                 </div>
-                <div class="footer-col">
-                    <p class="footer-heading font-bitcount">Navigasi</p>
-                    <ul class="footer-nav">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="#layanan" class="footer-link">Service</a></li>
-                        <li><a href="#tentang" class="footer-link">About Us</a></li>
-                        <li><a href="#cta" class="footer-link">Contact</a></li>
+
+                <!-- Kolom Navigasi -->
+                <div>
+                    <p class="font-bitcount text-white text-[1.1rem] tracking-[0.5px] mb-6">Navigasi</p>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Home</a></li>
+                        <li><a href="index.html#layanan" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Service</a></li>
+                        <li><a href="index.html#tentang" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">About Us</a></li>
+                        <li><a href="index.html#cta" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <p class="footer-heading font-bitcount">Layanan AI</p>
-                    <ul class="footer-nav">
-                        <li><a href="#service-image-gen" class="footer-link">Image Generation</a></li>
-                        <li><a href="#service-comp-vision" class="footer-link">Computer Vision</a></li>
-                        <li><a href="#service-chatbot" class="footer-link">Assistant Chatbot</a></li>
-                        <li><a href="#service-automation" class="footer-link">Business Automation</a></li>
-                        <li><a href="#service-analysis" class="footer-link">Analysis Prediction</a></li>
+
+                <!-- Kolom Layanan AI -->
+                <div>
+                    <p class="font-bitcount text-white text-[1.1rem] tracking-[0.5px] mb-6">Layanan AI</p>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html#service-image-gen" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Image Generation</a></li>
+                        <li><a href="index.html#service-comp-vision" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Computer Vision</a></li>
+                        <li><a href="index.html#service-chatbot" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Assistant Chatbot</a></li>
+                        <li><a href="index.html#service-automation" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Business Automation</a></li>
+                        <li><a href="index.html#service-analysis" class="text-[#9ea4b0] text-[0.9rem] transition-colors duration-200 hover:text-[#38bdf8]">Analysis Prediction</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <p class="footer-heading font-bitcount">Hubungi Kami</p>
-                    <ul class="footer-contact">
-                        <li><strong>Email:</strong> contact@glumina.ai</li>
-                        <li><strong>Telepon:</strong> +62 (21) 8089-2026</li>
-                        <li><strong>Lokasi:</strong> Laguboti, Toba, Sumatera Utara, Indonesia</li>
+
+                <!-- Kolom Kontak -->
+                <div>
+                    <p class="font-bitcount text-white text-[1.1rem] tracking-[0.5px] mb-6">Hubungi Kami</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="text-[#9ea4b0] text-[0.9rem]"><strong class="text-white">Email:</strong> gladysyulia27@gmail.com</li>
+                        <li class="text-[#9ea4b0] text-[0.9rem]"><strong class="text-white">Telepon:</strong> +6281221910971</li>
+                        <li class="text-[#9ea4b0] text-[0.9rem]"><strong class="text-white">Lokasi:</strong> Laguboti, Toba, Sumatera Utara, Indonesia</li>
                     </ul>
                 </div>
+
             </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2026 Glumina AI Technologies. Seluruh Hak Cipta Dilindungi.</p>
-                <p class="footer-academic">Praktikum Pengembangan Aplikasi Berbasis Web (PABWE)</p>
+
+            <!-- Copyright & Keterangan Akademik -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
+                <p class="text-[#6b7280] text-[0.82rem]">&copy; 2026 Glumina AI Technologies. Seluruh Hak Cipta Dilindungi.</p>
+                <p class="text-[#6b7280] text-[0.82rem]">Praktikum Pengembangan Aplikasi Berbasis Web (PABWE)</p>
             </div>
         </div>
     </footer>
+    <!-- =================== END FOOTER =================== -->
+
 </body>
 
 </html>
