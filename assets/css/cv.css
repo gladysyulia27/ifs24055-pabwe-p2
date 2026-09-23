@@ -1,0 +1,73 @@
+/* Tailwind v4 brand tokens for the CV page. */
+@theme {
+    --color-brand-bg: #040507;
+    --color-brand-surface: #0a0c10;
+    --color-brand-ink: #0b0c10;
+    --color-brand-cyan: #38bdf8;
+    --color-brand-gold: #e8b259;
+    --color-brand-gold-light: #f5dca6;
+    --color-brand-text: #ffffff;
+    --color-brand-muted: #9ea4b0;
+    --color-brand-nav: #a4a9b6;
+}
+
+/* Fallback values keep the external stylesheet compatible with the browser CDN. */
+:root {
+    --color-brand-bg: #040507;
+    --color-brand-surface: #0a0c10;
+    --color-brand-ink: #0b0c10;
+    --color-brand-cyan: #38bdf8;
+    --color-brand-gold: #e8b259;
+    --color-brand-gold-light: #f5dca6;
+    --color-brand-text: #ffffff;
+    --color-brand-muted: #9ea4b0;
+    --color-brand-nav: #a4a9b6;
+}
+
+.cv-nav-link {
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-brand-nav);
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.cv-nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-brand-gold), var(--color-brand-cyan));
+    transition: width 0.2s ease, left 0.2s ease;
+}
+
+.cv-nav-link:hover,
+.cv-nav-link.active {
+    color: var(--color-brand-text);
+}
+
+.cv-nav-link:hover::after,
+.cv-nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+#nav-toggle-checkbox:checked ~ #navToggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle-checkbox:checked ~ #navToggle span:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle-checkbox:checked ~ #navToggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.font-bitcount {
+    font-family: "Bitcount Single", monospace;
+}
