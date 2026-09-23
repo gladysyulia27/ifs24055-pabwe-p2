@@ -41,21 +41,20 @@
             <!-- Main Nav: mobile fullscreen overlay + desktop centered row -->
             <!-- peer-checked:* digunakan untuk membuka menu saat checkbox aktif -->
             <nav class="fixed inset-0 h-screen bg-[#040507]/98 -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-[999] flex flex-col justify-center peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:absolute md:inset-auto md:h-auto md:w-auto md:bg-transparent md:translate-y-0 md:opacity-100 md:pointer-events-auto md:flex-row md:items-center md:left-1/2 md:-translate-x-1/2" id="mainNav">
-                <ul class="flex flex-col md:flex-row items-center gap-8 md:gap-9 text-center">
-                    <li><a href="index.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">HOME<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
-                    <li><a href="index.html#layanan" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">SERVICE<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
-                    <li><a href="index.html#tentang" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">ABOUT<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
-                    <li><a href="blog.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-[#a4a9b6] hover:text-white relative pb-2 group">BLOG<span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8] transition-all duration-200 group-hover:w-full group-hover:left-0"></span></a></li>
-                    <!-- Link aktif (halaman saat ini): underline permanen -->
-                    <li><a href="cv.html" class="text-[1.1rem] md:text-[0.82rem] font-semibold tracking-[1.5px] text-white relative pb-2 group">CV<span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#e8b259] to-[#38bdf8]"></span></a></li>
+                <ul class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center">
+                    <li><a href="index.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">HOME</a></li>
+                    <li><a href="index.html#layanan" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">SERVICE</a></li>
+                    <li><a href="index.html#tentang" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">ABOUT</a></li>
+                    <li><a href="blog.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">BLOG</a></li>
+                    <li><a href="cv.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#38bdf8] px-3 py-2 rounded-lg transition-all">CV</a></li>
                     <!-- CTA hanya tampil di mobile -->
-                    <li class="md:hidden mt-2"><a href="index.html#cta" class="inline-flex items-center justify-center gap-[10px] bg-white text-[#0b0c10] px-7 py-3 rounded-full font-semibold text-[0.85rem] tracking-[0.5px] shadow-[0_4px_18px_rgba(255,255,255,0.2)]">CONTACT US</a></li>
+                    <li class="md:hidden mt-4"><a href="index.html#cta" class="inline-flex items-center justify-center gap-2 bg-[#f1f3f7] text-[#0b0c10] px-6 py-2.5 rounded-full font-semibold text-[0.9rem] transition-colors hover:bg-[#eef1f6]">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <!-- CTA Button (desktop only) -->
             <div class="hidden md:block">
-                <a href="index.html#cta" class="inline-flex items-center justify-center gap-[10px] bg-white text-[#0b0c10] px-7 py-3 rounded-full font-semibold text-[0.85rem] tracking-[0.5px] transition-all duration-200 hover:-translate-y-[2px] hover:bg-[#eef1f6] hover:shadow-[0_8px_24px_rgba(255,255,255,0.35)] shadow-[0_4px_18px_rgba(255,255,255,0.2)]">CONTACT US</a>
+                <a href="index.html#cta" class="inline-flex items-center justify-center gap-2 bg-[#f1f3f7] text-[#0b0c10] px-6 py-2.5 rounded-full font-semibold text-[0.9rem] transition-all hover:-translate-y-[2px] hover:bg-[#eef1f6] hover:shadow-[0_4px_15px_rgba(255,255,255,0.2)]">CONTACT US</a>
             </div>
 
         </div>
@@ -79,9 +78,9 @@
                                 Gladys Yulia Stephanie Manurung
                             </h1>
                             <!-- Judul profesi dengan font Bitcount & warna gold -->
-                            <p class="font-bitcount text-[#F5DCA6] text-[1.05rem] mb-3">
+                            <h3 class="font-bitcount text-[#F5DCA6] text-[1.05rem] mb-3">
                                 Aspiring AI Engineer &amp; Full-Stack Web Developer
-                            </p>
+                            </h3>
                             <p class="text-[#9ea4b0] text-[0.95rem] leading-relaxed">
                                 Mahasiswa Institut Teknologi Del (PABWE 2026) yang berfokus pada arsitektur kecerdasan buatan, otomasi sistem terintegrasi, dan antarmuka web modern.
                             </p>
@@ -265,4 +264,3 @@
 </body>
 
 </html>
-
