@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Curriculum Vitae â€” Gladys Yulia Stephanie Manurung.">
-    <title>Glumina â€” Curriculum Vitae (CV)</title>
+    <title>Glumina-Curriculum Vitae (CV)</title>
     <!-- Google Fonts: Inter & Bitcount Single -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,7 @@
             padding: 8px 0;
             transition: color 0.2s ease;
         }
+
         .cv-nav-link::after {
             content: "";
             position: absolute;
@@ -36,23 +37,31 @@
             background: linear-gradient(90deg, #e8b259, #38bdf8);
             transition: width 0.2s ease, left 0.2s ease;
         }
-        .cv-nav-link:hover, .cv-nav-link.active {
+
+        .cv-nav-link:hover,
+        .cv-nav-link.active {
             color: #ffffff;
         }
-        .cv-nav-link:hover::after, .cv-nav-link.active::after {
+
+        .cv-nav-link:hover::after,
+        .cv-nav-link.active::after {
             width: 100%;
             left: 0;
         }
+
         /* Hamburger menu animation */
-        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(1) {
+        #nav-toggle-checkbox:checked~#navToggle span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
-        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(2) {
+
+        #nav-toggle-checkbox:checked~#navToggle span:nth-child(2) {
             opacity: 0;
         }
-        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(3) {
+
+        #nav-toggle-checkbox:checked~#navToggle span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -6px);
         }
+
         /* Custom Font Utility for CV */
         .font-bitcount {
             font-family: "Bitcount Single", monospace;
