@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -15,6 +15,49 @@
     <link rel="icon" type="image/png" href="assets/img/logoglumina.png">
     <!-- Tailwind CSS 4 Play CDN â€” utility-first styling engine -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Scoped styles to match index.html navbar behavior exactly */
+        .cv-nav-link {
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #a4a9b6;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.2s ease;
+        }
+        .cv-nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e8b259, #38bdf8);
+            transition: width 0.2s ease, left 0.2s ease;
+        }
+        .cv-nav-link:hover, .cv-nav-link.active {
+            color: #ffffff;
+        }
+        .cv-nav-link:hover::after, .cv-nav-link.active::after {
+            width: 100%;
+            left: 0;
+        }
+        /* Hamburger menu animation */
+        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(2) {
+            opacity: 0;
+        }
+        #nav-toggle-checkbox:checked ~ #navToggle span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+        /* Custom Font Utility for CV */
+        .font-bitcount {
+            font-family: "Bitcount Single", monospace;
+        }
+    </style>
 </head>
 
 <body class="bg-[#040507] text-white font-inter leading-relaxed overflow-x-hidden antialiased">
@@ -38,17 +81,16 @@
                 <span class="w-full h-[2px] bg-white transition-all duration-200"></span>
             </label>
 
-            <!-- Main Nav: mobile fullscreen overlay + desktop centered row -->
-            <!-- peer-checked:* digunakan untuk membuka menu saat checkbox aktif -->
-            <nav class="fixed inset-0 h-screen bg-[#040507]/98 -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-[999] flex flex-col justify-center peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:absolute md:inset-auto md:h-auto md:w-auto md:bg-transparent md:translate-y-0 md:opacity-100 md:pointer-events-auto md:flex-row md:items-center md:left-1/2 md:-translate-x-1/2" id="mainNav">
-                <ul class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center">
-                    <li><a href="index.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">HOME</a></li>
-                    <li><a href="index.html#layanan" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">SERVICE</a></li>
-                    <li><a href="index.html#tentang" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">ABOUT</a></li>
-                    <li><a href="blog.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#a4a9b6] hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all">BLOG</a></li>
-                    <li><a href="cv.html" class="text-[1.1rem] md:text-[0.88rem] font-semibold tracking-[1px] text-[#38bdf8] px-3 py-2 rounded-lg transition-all">CV</a></li>
+            <!-- Main Nav: mobile dropdown + desktop centered row -->
+            <nav class="absolute top-[80px] left-0 w-full bg-[#040507]/98 py-8 border-b border-white/5 -translate-y-[150%] opacity-0 pointer-events-none transition-all duration-400 ease-in-out z-[-1] peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:absolute md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 md:w-auto md:bg-transparent md:py-0 md:border-none md:opacity-100 md:pointer-events-auto md:z-auto" id="mainNav">
+                <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-9 text-center">
+                    <li><a href="index.html" class="cv-nav-link">HOME</a></li>
+                    <li><a href="index.html#layanan" class="cv-nav-link">SERVICE</a></li>
+                    <li><a href="index.html#tentang" class="cv-nav-link">ABOUT</a></li>
+                    <li><a href="blog.html" class="cv-nav-link">BLOG</a></li>
+                    <li><a href="cv.html" class="cv-nav-link active">CV</a></li>
                     <!-- CTA hanya tampil di mobile -->
-                    <li class="md:hidden mt-4"><a href="index.html#cta" class="inline-flex items-center justify-center gap-2 bg-[#f1f3f7] text-[#0b0c10] px-6 py-2.5 rounded-full font-semibold text-[0.9rem] transition-colors hover:bg-[#eef1f6]">CONTACT US</a></li>
+                    <li class="md:hidden mt-2"><a href="index.html#cta" class="inline-flex items-center justify-center gap-2 bg-[#f1f3f7] text-[#0b0c10] px-6 py-2.5 rounded-full font-semibold text-[0.9rem] transition-colors hover:bg-[#eef1f6]">CONTACT US</a></li>
                 </ul>
             </nav>
 
