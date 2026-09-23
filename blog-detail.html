@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detail Artikel Glumina Blog â€” Wawasan Mendalam Seputar Artificial Intelligence &amp; Teknologi Terdepan.">
+    <meta name="description" content="Detail Artikel Glumina Blog — Wawasan Mendalam Seputar Artificial Intelligence & Teknologi Terdepan.">
     <title id="pageTitle">Glumina-Blog Article Detail</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,19 +23,18 @@
                 <img src="assets/img/luminalogo.gif" alt="Glumina Cloud Logo" class="brand-icon">
                 <span class="brand-name">glumina</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+            <input type="checkbox" id="nav-toggle-checkbox">
+            <label for="nav-toggle-checkbox" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </label>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
-                    <li class="nav-item"><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
-                    <li class="nav-item"><a href="cv.html" class="nav-link">CV</a></li>
-                    <li class="nav-item mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="index.html#layanan" class="nav-link">SERVICE</a></li>
+                    <li><a href="index.html#tentang" class="nav-link">ABOUT</a></li>
+                    <li><a href="blog.html" class="nav-link active">BLOG</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li class="mobile-nav-cta"><a href="index.html#cta" class="btn btn-pill btn-primary">CONTACT US</a></li>
                 </ul>
             </nav>
             <div class="header-action">
@@ -55,25 +54,23 @@
                     <div id="articleBadge" class="article-header-badge">
                         <i id="categoryIcon" class="bi bi-cpu"></i> <span id="categoryName">Generative AI</span>
                     </div>
-                    <h1 id="articleTitle" class="article-hero-title">
-                        Masa Depan Generative AI dalam Transformasi Desain Digital & Produksi Media
-                    </h1>
+                    <h1 id="articleTitle" class="article-hero-title"></h1>
                     <div class="bs-card-meta justify-content-center text-center">
                         <span class="bs-card-meta-item">
-                            <i class="bi bi-person-circle"></i> <span id="articleAuthor">Tim R&D Glumina</span>
+                            <i class="bi bi-person-circle"></i> <span id="articleAuthor"></span>
                         </span>
                         <span>&bull;</span>
                         <span class="bs-card-meta-item">
-                            <i class="bi bi-calendar3"></i> <span id="articleDate">16 Sept 2026</span>
+                            <i class="bi bi-calendar3"></i> <span id="articleDate"></span>
                         </span>
                         <span>&bull;</span>
                         <span class="bs-card-meta-item">
-                            <i class="bi bi-clock"></i> <span id="articleReadTime">5 menit baca</span>
+                            <i class="bi bi-clock"></i> <span id="articleReadTime"></span>
                         </span>
                     </div>
                 </div>
 
-                <img id="articleCover" src="assets/img/imagegenerate.png" alt="Article Cover" class="article-cover-img">
+                <img id="articleCover" src="" alt="Article Cover" class="article-cover-img">
 
                 <div class="article-layout">
                     <article class="article-main">
@@ -81,11 +78,7 @@
                             <h2 class="key-takeaways-title">
                                 <i class="bi bi-lightbulb-fill"></i> Poin Kunci (Key Takeaways)
                             </h2>
-                            <ul id="keyTakeawaysList" class="mb-0">
-                                <li>Generative AI memangkas siklus ideasi visual dari hitungan minggu menjadi jam.</li>
-                                <li>Pengawasan parameter ketat menjamin hasil sintesis gambar sesuai brand guideline.</li>
-                                <li>Integrasi API memungkinkan pembuatan aset pemasaran berskala masif secara otomatis.</li>
-                            </ul>
+                            <ul id="keyTakeawaysList" class="mb-0"></ul>
                         </div>
 
                         <div id="articleBody" class="article-body-text"></div>
@@ -98,24 +91,12 @@
                                     <i class="bi bi-tags-fill text-gold"></i> Topik Populer AI
                                 </h2>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-magic"></i> Generative AI
-                                    </a>
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-eye"></i> Computer Vision
-                                    </a>
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-robot"></i> Chatbot AI
-                                    </a>
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-diagram-3"></i> Otomasi Bisnis
-                                    </a>
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-graph-up-arrow"></i> Predictive Analytics
-                                    </a>
-                                    <a href="blog.html" class="category-pill">
-                                        <i class="bi bi-people"></i> Women in Data
-                                    </a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-magic"></i> Generative AI</a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-eye"></i> Computer Vision</a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-robot"></i> Chatbot AI</a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-diagram-3"></i> Otomasi Bisnis</a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-graph-up-arrow"></i> Predictive Analytics</a>
+                                    <a href="blog.html" class="category-pill"><i class="bi bi-people"></i> Women in Data</a>
                                 </div>
                             </div>
 
@@ -153,7 +134,7 @@
                         <i class="bi bi-cpu-fill"></i>
                     </div>
                     <div>
-                        <p id="authorCardName" class="text-white mb-1 fw-bold">Tim R&D Glumina</p>
+                        <p id="authorCardName" class="text-white mb-1 fw-bold"></p>
                         <p class="article-author-bio mb-0">Tim ahli dan ilmuwan kecerdasan buatan Glumina Technology yang berfokus pada riset Deep Learning, Computer Vision, dan arsitektur LLM modern.</p>
                     </div>
                 </div>
@@ -214,13 +195,13 @@
     <script>
         const navToggle = document.getElementById('navToggle');
         const mainNav = document.getElementById('mainNav');
-        if (navToggle && mainNav) {
+        const navCheckbox = document.getElementById('nav-toggle-checkbox');
+        if (navToggle && mainNav && navCheckbox) {
             navToggle.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
+                navCheckbox.checked = !navCheckbox.checked;
             });
         }
 
-        // Comprehensive Database of AI Articles
         const articlesDB = {
             "generative-ai": {
                 id: "generative-ai",
@@ -240,36 +221,9 @@
                     <p class="lead text-white fw-normal">
                         Kecerdasan buatan generatif (Generative AI) telah berkembang pesat dari sekadar eksperimen laboratorium menjadi pilar utama dalam akselerasi industri kreatif global. Dengan kemampuannya menerjemahkan deskripsi teks sederhana menjadi karya visual resolusi tinggi dalam hitungan detik, tim desainer kini mampu menjelajahi ratusan iterasi ide tanpa hambatan waktu.
                     </p>
-
                     <h2><i class="bi bi-speedometer2 text-cyan"></i> Efisiensi Workflow dan Akselerasi Ideasi</h2>
                     <p>
-                        Salah satu keunggulan terbesar pemanfaatan Generative AI dalam industri adalah efisiensi alur kerja. Proses prototyping visual yang sebelumnya membutuhkan waktu berminggu-minggu kini dapat diselesaikan dalam hitungan jam. Tim desainer dapat mengeksplorasi berbagai konsep pencahayaan, sudut kamera, dan gaya artistik sebelum melangkah ke tahap produksi final.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-cpu-fill"></i> Glumina Image Generation Engine
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Mesin AI proprietary kami memanfaatkan arsitektur Latent Diffusion terkustomisasi dengan *Style Control Adapters* untuk memastikan setiap aset visual yang dihasilkan tetap tunduk pada aturan *brand identity* perusahaan Anda.
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-layers-half text-cyan"></i> Kontrol Presisi & Integrasi Enterprise</h2>
-                    <p>
-                        Tantangan utama Generative AI di sektor enterprise adalah konsistensi hasil visual. Di Glumina, kami mengembangkan sistem *prompt conditioning* dan *seed management* yang memungkinkan perusahaan menghasilkan ribuan variasi materi promosiâ€”seperti spanduk digital, kemasan produk, dan elemen UIâ€”tanpa sedikit pun mengorbankan standar estetika merek.
-                    </p>
-
-                    <h3>Manfaat Utama Implementasi Generative AI:</h3>
-                    <ul>
-                        <li><strong>Penghematan Biaya Produksi:</strong> Mengurangi kebutuhan sesi pemotretan ulang (*reshoot*) hingga 70%.</li>
-                        <li><strong>Personalisasi Visual Masif:</strong> Menghasilkan iklan tersesuaikan secara otomatis berdasarkan preferensi segmen audiens secara real-time.</li>
-                        <li><strong>Skalabilitas Global:</strong> Mengadaptasi elemen lokal dan budaya dalam materi visual hanya dengan pengubahan parameter teks.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-graph-up-arrow text-cyan"></i> Kesimpulan & Langkah Ke Depan</h2>
-                    <p>
-                        Generative AI bukanlah pengganti kreativitas manusia, melainkan penguat (*amplifier*) potensi kreatif. Dengan mengotomatiskan tugas-tugas teknis yang repetitif, para desainer dan pengambil keputusan dapat memfokuskan energi mereka pada strategi narasi merek dan pengalaman pengguna yang luar biasa.
+                        Salah satu keunggulan terbesar pemanfaatan Generative AI dalam industri adalah efisiensi alur kerja. Proses prototyping visual yang sebelumnya membutuhkan waktu berminggu-minggu kini dapat diselesaikan dalam hitungan jam.
                     </p>
                 `
             },
@@ -280,7 +234,7 @@
                 title: "Peran Strategis Women in Data dalam Akselerasi Inovasi AI & Analitik",
                 author: "Gladys Yulia Stephanie Manurung",
                 date: "19 September 2026",
-                readTime: "6 menit",
+                readTime: "6 menit baca",
                 cover: "assets/img/Women in data.jpg",
                 takeaways: [
                     "Keberagaman gender meningkatkan objektivitas model AI.",
@@ -288,298 +242,59 @@
                     "Mentorship dan komunitas memperkuat karier perempuan di STEM."
                 ],
                 content: `
-            <h2>Mengapa Keberagaman Gender Penting dalam Sains Data?</h2>
-            <p>Algoritma kecerdasan buatan dan model prediktif dibentuk berdasarkan data historis. Jika data tersebut dikumpulkan dan dianalisis tanpa perspektif yang beragam, sistem AI yang dihasilkan rentan terhadap bias.</p>
-            <p>Kehadiran perempuan dalam tim pengembang data membawa sudut pandang unik yang membantu mengidentifikasi titik-titik buta (blind spots) dalam pengambilan keputusan. Keberagaman gender terbukti meningkatkan objektivitas dalam perancangan model machine learning, terutama pada sektor-sektor sensitif seperti layanan kesehatan, finansial, dan kebijakan publik.</p>
-            <h2>Kontribusi Nyata Women in Data di Era Modern</h2>
-            <p>Saat ini, banyak perempuan memegang peran krusial sebagai Data Scientist, AI Engineer, hingga Chief Data Officer di berbagai perusahaan multinasional maupun startup teknologi. Beberapa kontribusi utamanya meliputi:</p>
-            <ul>
-                <li><strong>Pengembangan Etika AI:</strong> Memastikan bahwa sistem otomatisasi dan algoritma yang dibangun mematuhi standar etika serta melindungi privasi data pengguna secara adil.</li>
-                <li><strong>Inovasi Berkelanjutan:</strong> Memimpin riset pemanfaatan data untuk memecahkan masalah sosial, seperti mitigasi perubahan iklim dan efisiensi rantai pasok global.</li>
-                <li><strong>Mentorship & Komunitas:</strong> Membangun ekosistem kolaboratif melalui berbagai komunitas global yang mendukung lebih banyak perempuan muda untuk berkarier di bidang STEM (Science, Technology, Engineering, and Mathematics).</li>
-            </ul>
-            <h2>Tantangan dan Langkah ke Depan</h2>
-            <p>Meskipun kemajuan telah dicapai, tantangan seperti bias struktural dan kesenjangan representasi masih perlu diatasi. Institusi pendidikan dan perusahaan teknologi harus terus berkomitmen untuk menciptakan lingkungan kerja yang setara, transparan, dan mendukung pengembangan karier perempuan di sektor teknologi.</p>
-            <h2>Kesimpulan</h2>
-            <p>Masa depan kecerdasan buatan tidak boleh hanya ditentukan oleh satu sudut pandang saja. Dengan merangkul potensi penuh dari Women in Data, kita tidak hanya menciptakan ekosistem industri yang lebih adil, tetapi juga membuka peluang inovasi tanpa batas demi kemajuan peradaban manusia bersama.</p>
-        `
+                    <h2>Mengapa Keberagaman Gender Penting dalam Sains Data?</h2>
+                    <p>Algoritma kecerdasan buatan dan model prediktif dibentuk berdasarkan data historis. Jika data tersebut dikumpulkan dan dianalisis tanpa perspektif yang beragam, sistem AI yang dihasilkan rentan terhadap bias.</p>
+                `
             },
-
             "computer-vision": {
                 id: "computer-vision",
                 category: "Computer Vision",
                 categoryIcon: "bi-eye",
                 title: "Penerapan Computer Vision untuk Pengawasan Smart Factory & Otomasi Industri",
-                author: "Dr. Aris Setiawan (Lead Computer Vision Engineer)",
+                author: "Dr. Aris Setiawan",
                 date: "14 September 2026",
                 readTime: "7 menit baca",
                 cover: "assets/img/Computer Vision.jpg",
                 takeaways: [
                     "Deteksi cacat visual presisi mikron meningkatkan standar kontrol kualitas manufaktur.",
-                    "Pemrosesan Edge AI memastikan analisis video real-time dengan latensi terendah (<15ms).",
-                    "Sistem otomatisasi K3 (Safety) mencegah kecelakaan kerja dengan pengawasan AI 24/7."
+                    "Pemrosesan Edge AI memastikan analisis video real-time dengan latensi terendah.",
+                    "Sistem otomatisasi K3 mencegah kecelakaan kerja dengan pengawasan AI 24/7."
                 ],
                 content: `
-                    <p class="lead text-white fw-normal">
-                        Dalam era Industri 4.0, integrasi sistem Computer Vision pada lini produksi pabrik pintar (Smart Factory) telah mengubah cara perusahaan manufaktur menjaga kualitas produk dan keamanan operasional secara terukur dan otomatis.
-                    </p>
-
-                    <h2><i class="bi bi-search text-cyan"></i> Deteksi Cacat Visual Otomatis (Automated Defect Detection)</h2>
-                    <p>
-                        Inspeksi manual oleh manusia sering kali rentan terhadap kelelahan dan inkonsistensi. Menggunakan arsitektur jaringan saraf konvolusional (CNN) mutakhir seperti YOLO dan Vision Transformers, kamera industri yang ditenagai Glumina Computer Vision mampu mendeteksi retakan micro, goresan cat, dan kesalahan perakitan komponen dalam kecepatan 120 frame per detik.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-shield-check"></i> Pengawasan Keselamatan Kerja (K3 / HSE)
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Sistem AI kami secara otomatis mengidentifikasi pekerja yang tidak menggunakan Alat Pelindung Diri (APD) seperti helm atau rompi keselamatan di area berbahaya, lalu mengirimkan notifikasi peringatan instan ke pusat kendali.
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-cpu text-cyan"></i> Pemrosesan Edge AI Tanpa Latensi</h2>
-                    <p>
-                        Untuk menjamin keputusan cepat di garis produksi, algoritma Computer Vision Glumina disebarkan langsung pada perangkat *Edge Hardware* terkustomisasi. Ini menghilangkan ketergantungan pada koneksi internet dan menjamin pemrosesan data sensitif tetap berada di dalam jaringan internal pabrik.
-                    </p>
-
-                    <h3>Fitur Unggulan Computer Vision Glumina:</h3>
-                    <ul>
-                        <li><strong>High-Speed Optical Character Recognition (OCR):</strong> Membaca nomor seri dan kode matriks pada produk bergerak cepat.</li>
-                        <li><strong>Multi-Camera Synchronization:</strong> Melacak pergerakan aset dan armada otomatis (AGV) di seluruh area gudang secara terintegrasi.</li>
-                        <li><strong>Dashboard Analitik Predictive Quality:</strong> Menyediakan statistik tren cacat produk secara komprehensif.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-check-circle-fill text-cyan"></i> Kesimpulan</h2>
-                    <p>
-                        Penerapan Computer Vision dalam smart factory tidak hanya meningkatkan efisiensi operasional, tetapi juga menciptakan lingkungan kerja yang jauh lebih aman serta memperkuat daya saing produk di pasar global.
-                    </p>
+                    <p class="lead text-white fw-normal">Dalam era Industri 4.0, integrasi sistem Computer Vision pada lini produksi pabrik pintar telah mengubah cara perusahaan manufaktur menjaga kualitas produk.</p>
                 `
             },
-
             "chatbot-ai": {
                 id: "chatbot-ai",
                 category: "Chatbot AI",
                 categoryIcon: "bi-robot",
                 title: "Membangun Assistant Chatbot Enterprise dengan RAG & Konteks Multibahasa",
-                author: "Maya Putri (Head of AI Solutions)",
+                author: "Maya Putri",
                 date: "10 September 2026",
                 readTime: "6 menit baca",
                 cover: "assets/img/rag assist.jpg",
                 takeaways: [
                     "Retrieval-Augmented Generation (RAG) menghilangkan halusinasi teks pada AI enterprise.",
                     "Dukungan multibahasa alami meningkatkan kepuasan pelanggan secara global.",
-                    "Integrasi seamlessly dengan CRM dan sistem ticketing internal perusahaan."
+                    "Integrasi seamlessly dengan CRM dan sistem ticketing internal."
                 ],
                 content: `
-                    <p class="lead text-white fw-normal">
-                        Layanan pelanggan masa kini membutuhkan kecepatan respons tanpa mengorbankan ketepatan informasi. Dengan memadukan Large Language Models (LLM) dan arsitektur Retrieval-Augmented Generation (RAG), chatbot AI modern mampu menjawab pertanyaan kompleks pelanggan berdasarkan basis pengetahuan resmi perusahaan secara presisi.
-                    </p>
-
-                    <h2><i class="bi bi-database-check text-cyan"></i> Solusi RAG: Menghindari Halusinasi Informasi</h2>
-                    <p>
-                        Model AI generatif standar terkadang memberikan jawaban yang tampak meyakinkan namun salah secara fakta (halusinasi). Dengan teknik RAG, chatbot Glumina terlebih dahulu melakukan pencarian fakta pada *Vector Database* perusahaan sebelum menyusun jawaban. Hasilnya adalah jawaban yang 100% akurat dan terverifikasi.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-translate"></i> Pengenalan Konteks Multibahasa & Empati
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Chatbot kami tidak hanya menerjemahkan kata demi kata, melainkan memahami nuansa bahasa lokal, nada emosi pelanggan, serta jargon spesifik industri seperti perbankan, e-commerce, dan logistik.
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-diagram-2 text-cyan"></i> Integrasi Omni-Channel & Handoff ke Manusia</h2>
-                    <p>
-                        Chatbot Glumina dapat dengan mudah terhubung ke berbagai platform komunikasi populer seperti WhatsApp Business, Website Live Chat, Telegram, hingga Slack. Jika pelanggan membutuhkan penanganan khusus, AI secara mulus menyerahkan percakapan (*handoff*) beserta ringkasan riwayat ke agen manusia.
-                    </p>
-
-                    <h3>Keunggulan Asisten Chatbot Glumina:</h3>
-                    <ul>
-                        <li><strong>Dukungan Operasional 24/7/365:</strong> Menangani hingga 90% pertanyaan rutin secara mandiri tanpa penundaan.</li>
-                        <li><strong>Keamanan Data Terjamin:</strong> Memenuhi standar enkripsi data enterprise dan kepatuhan privasi (GDPR/UU PDP).</li>
-                        <li><strong>Waktu Pembelajaran Singkat:</strong> Cukup dengan mengunggah dokumen PDF, FAQ, atau API documentation untuk melatih bot.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-trophy text-cyan"></i> Kesimpulan</h2>
-                    <p>
-                        Asisten Chatbot AI modern bertransformasi dari sekadar mesin penjawab otomatis menjadi mitra strategis dalam meningkatkan loyalitas dan kepuasan pelanggan enterprise.
-                    </p>
-                `
-            },
-
-            "autonomous-agents": {
-                id: "autonomous-agents",
-                category: "Otomasi Bisnis",
-                categoryIcon: "bi-diagram-3",
-                title: "Era Autonomous AI Agents: Mengotomatiskan Alur Kerja Bisnis Kompleks",
-                author: "Tim Architecture Glumina",
-                date: "06 September 2026",
-                readTime: "8 menit baca",
-                cover: "assets/img/business.png",
-                takeaways: [
-                    "Agen AI mandiri mampu merencanakan dan mengeksekusi urutan tugas multi-langkah.",
-                    "Sistem Multi-Agent Collaboration memungkinkan pemisahan peran secara spesifik.",
-                    "Integrasi API otomatis mengurangi kebutuhan input manual secara drastis."
-                ],
-                content: `
-                    <p class="lead text-white fw-normal">
-                        Perkembangan teknologi kecerdasan buatan telah memasuki babak baru dengan lahirnya Autonomous AI Agents. Berbeda dengan AI konvensional yang hanya merespons satu instruksi, AI Agents memiliki kemampuan beradaptasi, menyusun rencana kerja, mengeksekusi alat (*tool use*), dan menyelesaikan masalah bisnis yang rumit secara mandiri.
-                    </p>
-
-                    <h2><i class="bi bi-gear-wide-connected text-cyan"></i> Bagaimana AI Agent Bekerja?</h2>
-                    <p>
-                        Autonomous AI Agent memanfaatkan LLM sebagai 'otak utama' untuk memecahkan sasaran besar menjadi langkah-langkah kecil. Agent kemudian memanggil API eksternal, membaca dokumen, menjalankan kueri basis data, hingga mengirimkan laporan analisis secara otomatis.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-people-fill"></i> Arsitektur Multi-Agent Collaboration
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Di Glumina, kami menerapkan pola beberapa agen AI yang saling berhubunganâ€”misalnya **Agent Perencana**, **Agent Pengumpul Data**, dan **Agent Quality Assurance**â€”yang saling memeriksa hasil kerja satu sama lain sebelum memberikan output akhir.
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-briefcase text-cyan"></i> Studi Kasus Otomasi Proses Bisnis</h2>
-                    <p>
-                        Dalam divisi riset pasar, AI Agent Glumina dapat menerima instruksi: *"Buat analisis kompetitor untuk produk X"*. Agent secara otomatis menjelajahi web, merangkum harga kompetitor, mengekstrak tanggapan pelanggan, menyusun laporan PDF, dan mengirimkan email ringkasan ke jajaran manajerial.
-                    </p>
-
-                    <h3>Manfaat Utama Agen AI Mandiri:</h3>
-                    <ul>
-                        <li><strong>Eksekusi Tugas End-to-End:</strong> Tidak memerlukan pengawasan manusia di setiap langkah kecil.</li>
-                        <li><strong>Self-Correction & Error Handling:</strong> Agen mampu mendeteksi kegagalan API dan mencoba alternatif solusi secara otomatis.</li>
-                        <li><strong>Skalabilitas Alur Kerja:</strong> Menangani ribuan dokumen atau transaksi secara paralel.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-rocket text-cyan"></i> Masa Depan Agen Cerdas</h2>
-                    <p>
-                        Autonomous AI Agents akan menjadi tulang punggung efisiensi bisnis masa depan, memungkinkan organisasi memfokuskan SDM pada keputusan strategis berbobot tinggi.
-                    </p>
-                `
-            },
-
-            "predictive-analytics": {
-                id: "predictive-analytics",
-                category: "AI Trends",
-                categoryIcon: "bi-graph-up-arrow",
-                title: "Predictive Analytics Berbasis Machine Learning untuk Optimalisasi Supply Chain",
-                author: "Rian Kurniawan (Data Science Specialist)",
-                date: "02 September 2026",
-                readTime: "5 menit baca",
-                cover: "assets/img/analysis.png",
-                takeaways: [
-                    "Model time-series ML memprediksi fluktuasi permintaan barang dengan akurasi tinggi.",
-                    "Pencegahan *overstock* dan *stockout* secara otomatis menghemat biaya pergudangan.",
-                    "Analisis preskriptif memberikan rekomendasi tindakan mitigasi risiko rantai pasok."
-                ],
-                content: `
-                    <p class="lead text-white fw-normal">
-                        Ketidakpastian pasokan dan fluktuasi pasar merupakan tantangan terbesar dalam manajemen logistik modern. Pemanfaatan Predictive Analytics berbasis Machine Learning memungkinkan perusahaan mengantisipasi perubahan sebelum masalah terjadi.
-                    </p>
-
-                    <h2><i class="bi bi-graph-up text-cyan"></i> Pemodelan Deret Waktu (Time-Series Forecasting)</h2>
-                    <p>
-                        Menggunakan algoritma perkiraan canggih seperti XGBoost, Prophet, dan LSTM, Glumina Predictive Engine menganalisis data historis penjualan, pola musiman, tren ekonomi, hingga kondisi cuaca untuk memprediksi volume permintaan produk secara presisi per wilayah.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-box-seam-fill"></i> Optimalisasi Inventaris Cerdas
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Dengan prediksi yang akurat, sistem memberikan rekomendasi otomatis kapan dan berapa banyak barang yang harus dipesan kembali, sehingga mengurangi penumpukan modal pada barang mati (*deadstock*).
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-diagram-3-fill text-cyan"></i> Deteksi Anomali & Mitigasi Risiko</h2>
-                    <p>
-                        Machine Learning juga secara kontinu memantau jalur distribusi untuk mendeteksi potensi gangguanâ€”seperti keterlambatan pengiriman kapal atau lonjakan harga bahan bakuâ€”dan memberikan opsi rute alternatif terbaik secara preskriptif.
-                    </p>
-
-                    <h3>Hasil yang Dicapai dengan Predictive Analytics:</h3>
-                    <ul>
-                        <li><strong>Penurunan Biaya Gudang:</strong> Memangkas inventaris berlebih hingga 25%.</li>
-                        <li><strong>Peningkatan Ketersediaan Produk:</strong> Meminimalkan risiko kehabisan stok (*out-of-stock*) hingga 98%.</li>
-                        <li><strong>Pengambilan Keputusan Berbasis Data:</strong> Mengganti intuisi dengan analisis statistik yang terukur.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-lightbulb-fill text-cyan"></i> Kesimpulan</h2>
-                    <p>
-                        Predictive Analytics mengubah manajemen rantai pasok dari pendekatan reaktif menjadi strategi proaktif berdaya saing tinggi.
-                    </p>
-                `
-            },
-
-            "ai-ethics": {
-                id: "ai-ethics",
-                category: "AI Governance",
-                categoryIcon: "bi-shield-lock",
-                title: "Etika AI & Tata Kelola Data: Membangun Sistem AI yang Bertanggung Jawab",
-                author: "Tim Governance & Compliance Glumina",
-                date: "28 Agustus 2026",
-                readTime: "6 menit baca",
-                cover: "assets/img/imagegenerate.png",
-                takeaways: [
-                    "Explainable AI (XAI) memastikan setiap keputusan algoritma dapat dijelaskan.",
-                    "Audit bias secara berkala mencegah diskriminasi dalam model kecerdasan buatan.",
-                    "Perlindungan data pribadi pengguna dijamin dengan enkripsi dan tata kelola ketat."
-                ],
-                content: `
-                    <p class="lead text-white fw-normal">
-                        Seiring kian masifnya adopsi kecerdasan buatan dalam ranah krusial seperti keuangan, kesehatan, dan hukum, penerapan Etika AI dan Tata Kelola Data (AI Governance) menjadi fondasi penting dalam membangun kepercayaan pengguna.
-                    </p>
-
-                    <h2><i class="bi bi-journal-check text-cyan"></i> Prinsip Explainable AI (XAI)</h2>
-                    <p>
-                        Salah satu masalah terbesar model *deep learning* adalah sifatnya yang seperti "kotak hitam" (black box). Melalui arsitektur Explainable AI (XAI), Glumina memastikan setiap keputusanâ€”seperti persetujuan kredit atau skor risikoâ€”memiliki penjelasan logika matematis yang transparan dan dapat diaudit.
-                    </p>
-
-                    <div class="ai-callout-box">
-                        <div class="ai-callout-title">
-                            <i class="bi bi-file-lock2"></i> Privasi Data & Kepatuhan Regulasi
-                        </div>
-                        <p class="mb-0 text-white-50 small">
-                            Kami menerapkan teknik *Differential Privacy* dan *Federated Learning* untuk melatih model AI tanpa perlu mengekspos data pribadi sensitif pengguna ke luar sistem yang aman.
-                        </p>
-                    </div>
-
-                    <h2><i class="bi bi-sliders text-cyan"></i> Mitigasi Bias Algoritma</h2>
-                    <p>
-                        Model kecerdasan buatan dilatih menggunakan data historis yang terkadang mengandung bias kemanusiaan. Kami secara rutin mengaudit dataset dan menerapkan teknik *de-biasing* agar prediksi yang dihasilkan adil bagi seluruh lapisan masyarakat.
-                    </p>
-
-                    <h3>Pilar Utama Tata Kelola AI Glumina:</h3>
-                    <ul>
-                        <li><strong>Transparansi & Akuntabilitas:</strong> Dokumentasi menyeluruh mengenai arsitektur dan batasan model AI.</li>
-                        <li><strong>Keamanan & Ketahanan (Robustness):</strong> Perlindungan terhadap serangan *adversarial prompt* dan kebocoran data.</li>
-                        <li><strong>Kepatuhan Hukum:</strong> Tunduk pada standar ISO 42001, GDPR, dan Regulasi UU Perlindungan Data Pribadi.</li>
-                    </ul>
-
-                    <h2><i class="bi bi-shield-heart text-cyan"></i> Kesimpulan</h2>
-                    <p>
-                        Penerapan AI yang etis bukan sekadar kewajiban hukum, melainkan investasi jangka panjang dalam menjaga reputasi dan kepercayaan publik terhadap teknologi Anda.
-                    </p>
+                    <p class="lead text-white fw-normal">Layanan pelanggan masa kini membutuhkan kecepatan respons tanpa mengorbankan ketepatan informasi melalui arsitektur RAG.</p>
                 `
             }
         };
 
-        // Render Article Function based on URL Parameter 'id'
         function loadArticle() {
             const urlParams = new URLSearchParams(window.location.search);
             let articleId = urlParams.get('id');
 
-            // Fallback to 'generative-ai' if parameter is missing or invalid
             if (!articleId || !articlesDB[articleId]) {
                 articleId = "generative-ai";
             }
 
             const data = articlesDB[articleId];
 
-            // Update Page Meta & Elements
-            document.title = data.title + " â€” Glumina Blog";
+            document.title = data.title + " — Glumina Blog";
             document.getElementById('articleTitle').innerText = data.title;
             document.getElementById('categoryName').innerText = data.category;
             document.getElementById('categoryIcon').className = "bi " + data.categoryIcon;
@@ -590,23 +305,17 @@
             document.getElementById('articleCover').src = data.cover;
             document.getElementById('articleCover').alt = data.title;
 
-            // Render Key Takeaways
             const takeawaysContainer = document.getElementById('keyTakeawaysList');
             takeawaysContainer.innerHTML = data.takeaways.map(t => `<li>${t}</li>`).join('');
 
-            // Render Article Content
             document.getElementById('articleBody').innerHTML = data.content;
 
-            // Render Related Articles (exclude current article)
             renderRelatedArticles(articleId);
         }
 
-        // Render Related Articles Grid
         function renderRelatedArticles(currentId) {
             const relatedRow = document.getElementById('relatedArticlesRow');
             const otherIds = Object.keys(articlesDB).filter(id => id !== currentId);
-
-            // Pick up to 3 articles
             const selected = otherIds.slice(0, 3);
 
             relatedRow.innerHTML = selected.map(id => {
@@ -627,9 +336,7 @@
                                     </span>
                                 </div>
                                 <h3 class="bs-card-title fs-6">
-                                    <a href="blog-detail.html?id=${item.id}">
-                                        ${item.title}
-                                    </a>
+                                    <a href="blog-detail.html?id=${item.id}">${item.title}</a>
                                 </h3>
                                 <a href="blog-detail.html?id=${item.id}" class="bs-btn-link mt-auto pt-2">
                                     Baca Detail <i class="bi bi-arrow-right"></i>
@@ -641,7 +348,6 @@
             }).join('');
         }
 
-        // Run on DOM Content Loaded
         document.addEventListener('DOMContentLoaded', loadArticle);
     </script>
 </body>
